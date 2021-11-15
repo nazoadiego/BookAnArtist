@@ -1,0 +1,8 @@
+<h1>Artists to Book</h1>
+
+<% @offers.each do |offer| %>
+  <%= link_to offer.artist_name, offer_path(offer) %>
+<% end %>
+
+
+<p><%= link_to 'Create a new offer', new_offer_path %></p>

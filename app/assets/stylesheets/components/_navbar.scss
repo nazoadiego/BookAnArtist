@@ -1,12 +1,14 @@
 .navbar-lewagon {
+  font-family: 'ranga', cursive;
   justify-content: space-between;
-  background: white;
+  font-size: 1.5rem;
+  background: #5c7cfa;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon .navbar-brand {
   width: 40px;
 }

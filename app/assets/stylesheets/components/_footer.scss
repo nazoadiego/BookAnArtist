@@ -1,17 +1,14 @@
 @import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
 .footer {
-  background-color: lightblue;
+  background-color:	#E0FFFF;
   height: 100%;
   font-size: large;
 }
 
 .links {
   text-align: center;
-  font-size: large;
-  //
-
-
+  font-size: 40px;
 }
 
 h5 {
@@ -23,4 +20,12 @@ p {
   font-size: 30px;
   font-family: "Oswald",sans-serif;
 
+}
+
+.address{
+
+ul {
+  list-style: none;
+  text-align: center;
+}
 }

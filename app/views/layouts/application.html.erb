@@ -12,6 +12,45 @@
   </head>
 
   <body>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
     <%= yield %>
+    <div class="footer">
+      <div class="links">
+        <h5>BookAnArtist</h5>
+        <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+        </div>
+        <div class="address">
+          <ul>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i></a> C. Dr. Esquerdo, 70, 28007 Madrid</li>
+            <li><a href="#"><i class="fas fa-envelope"></i></a> contacto@bookanartist.com</li>
+            <li><a href="#"><i class="fas fa-phone"></i> +1 (212) 631 4546</li>
+          </ul>
+        </div>
+        <div>
+        <%# <p>Follow us on social media<i class="fas fa-heart"></i> </p> %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,14 +1,11 @@
 class OffersController < ApplicationController
   def index
     @offers = Offer.all
+    @offer = Offer.new
   end
 
   def show
     @offer = Offer.find(params[:id])
-  end
-
-  def new
-    @offer = Offer.new
   end
 
   def create
@@ -17,13 +14,13 @@ class OffersController < ApplicationController
     if @offer.save
       redirect_to @offer
     else
-      render :new
+      render 'offers/show'
     end
   end
 
   private
 
   def offer_params
-    params.require(:offer).permit(:artist_name, :description)
+    params.require(:offer).permit(:artist_name, :description, photos: [])
   end
 end

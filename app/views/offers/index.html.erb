@@ -5,4 +5,35 @@
 <% end %>
 
 
-<p><%= link_to 'Create a new offer', new_offer_path %></p>
+<%# FORM %>
+
+<div class="text-right m-3">
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create List</button>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Movie</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@offer) do |f| %>
+
+          <div class="form-inputs">
+            <%= f.input :artist_name %>
+            <%= f.input :description %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= f.button :submit, class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

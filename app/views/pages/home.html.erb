@@ -4,6 +4,15 @@
       <div class="col-4 d-flex flex-column align-item-center justify-content-center">
         <h1>Book your favorite artist!</h1>
         <p>I miss the old Kanye, straight from the Go Kanye. Chop up the soul Kanye, set on his goals Kanye. I hate the new Kanye, the bad mood Kanye. The always rude Kanye, spaz in the news Kanye.</p>
+        <div class="neon-button">
+        <a href="<%= offers_path %>">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Artists
+        </a>
+        </div>
       </div>
       <div id="carouselExampleIndicators" class="carousel slide col-4" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -31,17 +40,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-    </div>
-     <h3><%= link_to "BROWSE ARTISTS",offers_path, class:"btn btn-gradient" %></h3>
-  </div>
-</div>
 
-<div class="neon-button">
-  <a href="<%= offers_path %>">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    Artists
-  </a>
+    </div>
+  </div>
 </div>

@@ -2,14 +2,25 @@
 
 .footer {
   background-color:	#E0FFFF;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
   font-size: large;
 }
 
 .links {
-
+  background-color:	#E0FFFF;
   text-align: center;
   font-size: 40px;
+}
+
+.address{
+  background-color:	#E0FFFF;
+  ul {
+    list-style: none;
+    text-align: center;
+  }
 }
 
 h5 {
@@ -20,12 +31,4 @@ h5 {
 p {
   font-size: 30px;
   font-family: "Oswald",sans-serif;
-}
-
-.address{
-
-ul {
-  list-style: none;
-  text-align: center;
-}
 }

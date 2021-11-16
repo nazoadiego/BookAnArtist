@@ -1,3 +1,17 @@
+body {
+  background-color: #2b2b2b;
+}
+
 p {
   font-size: 1rem;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container-landing {
+  text-align: center;
+  margin-top: 1.8rem;
 }

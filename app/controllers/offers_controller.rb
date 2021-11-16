@@ -13,9 +13,12 @@ class OffersController < ApplicationController
 
   def create
     @offer = Offer.new(offer_params)
-    raise
-    @offer.save
-    redirect_to offers_path
+    @offer.user = current_user
+    if @offer.save
+      redirect_to @offer
+    else
+      render :new
+    end
   end
 
   private

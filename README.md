@@ -13,10 +13,10 @@
 - [ ] Add shadow to the navbar
 
 # Footer
-- [ ] Probably needs to change the color a bit so it matches the rest of the page.
+- [x] Probably needs to change the color a bit so it matches the rest of the page.
 
 # Homepage
-- [ ] Big banner
+- [x] Video Banner
 - [x] No navbar for landing page
 - [x] typewriter
 - [x] ghost button at the top right for Sign up

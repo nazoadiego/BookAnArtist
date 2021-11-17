@@ -11,15 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ranga:wght@700&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Zen+Kurenaido&display=swap');
+    </style>
   </head>
 
   <body>
+    <%= render 'shared/navbar' %>
     <div id="page-container">
-      <%= render 'shared/navbar' %>
       <%= yield %>
-        </div>
-      </div>
-      <%= render "shared/footer" %>
     </div>
+    <%= render "shared/footer" %>
   </body>
 </html>

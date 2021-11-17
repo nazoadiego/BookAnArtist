@@ -9,6 +9,10 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary my-2 mr-4 my-sm-0" type="submit">Search</button>
+      </form>
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <span class="navbar-toggler-icon" class= "avatar dropdown-toggle", id= "navbarDropdown", data-toggle= 'dropdown' , aria-haspopup="true", aria-expanded= "false" ></span>

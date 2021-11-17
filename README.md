@@ -17,10 +17,10 @@
 
 # Homepage
 - [ ] Big banner
-- [ ] No navbar for landing page
+- [x] No navbar for landing page
 - [x] typewriter
 - [x] ghost button at the top right for Sign up
-- [ ] ghost button at the top right for Login
+- [x] ghost button at the top right for Login
 
 # View
 - [ ] Position button at the top right corner

@@ -6,8 +6,11 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-
+  // display: inline-block;
+  padding: 0.75rem 0.75rem;
 }
+
+
 
 .btn-ghost:hover {
   opacity: 1;
@@ -61,6 +64,7 @@
     background-color: #2196f3;
     box-shadow: 0 0 10px #2196f3, 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
     transition-delay: 1s;
+
   }
 
   a span {

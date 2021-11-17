@@ -27,3 +27,7 @@
 - [ ] Create the pending neon button
 - [ ] Create a green create button (approved booking?)
 - [ ] Add a conditional to display a different button based on booking status
+
+# Index
+- [ ] Make the whole card a link
+- [ ] Make the cards rounded

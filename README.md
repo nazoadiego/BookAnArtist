@@ -26,6 +26,7 @@
 - [x] typewriter
 - [x] ghost button at the top right for Sign up
 - [x] ghost button at the top right for Login
+- [ ] Disable animated background (conflict with video)
 
 # View
 - [ ] Position button at the top right corner

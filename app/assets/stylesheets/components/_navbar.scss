@@ -2,7 +2,8 @@
   font-family: 'ranga', cursive;
   justify-content: space-between;
   font-size: 1.5rem;
-  background: #5c7cfa;
+  background: #d3d5db;
+  height: 50px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,4 +12,9 @@
 
 .navbar-lewagon .navbar-brand {
   width: 40px;
+}
+
+.dropdown{
+    display: flex;
+    align-items: center;
 }

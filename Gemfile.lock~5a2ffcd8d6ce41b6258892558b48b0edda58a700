@@ -130,8 +130,13 @@ GEM
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.8)
+    nokogiri (1.12.5-x86_64-darwin)
+      racc (~> 1.4)
+<<<<<<< HEAD
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
+=======
+>>>>>>> 6c70875e5918c8713018e3776c7b5efed9eaa6e2
     orm_adapter (0.5.0)
     pg (1.2.3)
     pry (0.13.1)
@@ -233,7 +238,7 @@ GEM
     unf_ext (0.0.8)
     warden (1.2.9)
       rack (>= 2.0.9)
-    web-console (4.2.0)
+    web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -254,9 +259,7 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-
-  x86_64-darwin-21
-
+  x86_64-darwin-19
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
@@ -290,4 +293,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.2.28
+   2.2.31

@@ -17,7 +17,9 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <% unless @hide_navbar %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <div id="page-container">
       <%= yield %>
     </div>

@@ -232,3 +232,22 @@
   animation: animate 8s linear infinite;
   }
 }
+
+.btn-ghost-post {
+  background-color: rgb(174, 137, 185);
+  color: #FFFF;
+  border: 1px solid #FFFF;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  // display: inline-block;
+  padding: 0.75rem 0.75rem;
+}
+
+.btn-ghost-post:hover {
+  opacity: 1;
+  background-color: white;
+  color: black;
+}

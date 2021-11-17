@@ -29,5 +29,6 @@
 - [ ] Add a conditional to display a different button based on booking status
 
 # Index
-- [ ] Make the whole card a link
-- [ ] Make the cards rounded
+- [T] Make the whole card a link
+- [T] Make card image the one from the offer
+- [L] Make the cards rounded

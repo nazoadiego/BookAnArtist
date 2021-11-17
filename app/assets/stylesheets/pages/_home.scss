@@ -22,9 +22,6 @@
 
 // Glowing text
 
-.text-glow {
-  // text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
-}
 
 // Gradient color text
 
@@ -80,4 +77,8 @@ body {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+
+label {
+  color: white
 }

@@ -8,9 +8,9 @@
 
 # Navbar
 - [ ] Find a good font for the navbar items
-- [ ] Change the icon from the navbar from an avatar to a dropdown icon
-- [ ] Change the color to black, possibly
-- [ ] Add shadow to the navbar
+- [x] Change the icon from the navbar from an avatar to a dropdown icon
+- [x] Change the color to black, possibly
+- [x] Add shadow to the navbar
 
 # Footer
 - [x] Probably needs to change the color a bit so it matches the rest of the page.

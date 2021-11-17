@@ -13,14 +13,19 @@
 - [ ] Add shadow to the navbar
 
 # Footer
-- [ ] Probably needs to change the color a bit so it matches the rest of the page.
+- [x] Probably needs to change the color a bit so it matches the rest of the page.
 
 # Homepage
+<<<<<<< HEAD
 - [ ] Big banner
-- [ ] No navbar for landing page
+- [ ] Alert if you are already signed in so that you cannot access the buttons
+=======
+- [x] Video Banner
+>>>>>>> master
+- [x] No navbar for landing page
 - [x] typewriter
 - [x] ghost button at the top right for Sign up
-- [ ] ghost button at the top right for Login
+- [x] ghost button at the top right for Login
 
 # View
 - [ ] Position button at the top right corner
@@ -29,5 +34,6 @@
 - [ ] Add a conditional to display a different button based on booking status
 
 # Index
-- [ ] Make the whole card a link
-- [ ] Make the cards rounded
+- [x] Make the whole card a link
+- [x] Make card image the one from the offer
+- [x] Make the cards rounded

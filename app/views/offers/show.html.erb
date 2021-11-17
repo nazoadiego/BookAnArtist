@@ -1,20 +1,30 @@
-<div class="show-container">
-  <div class="modal-body row align-items-end">
-    <div class="col-md-5">
-      <% @offer.photos.each do |photo| %>
-        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path photo.key, height: 300, width: 400, crop: :fill %>');">
+<div class="">
+  <div class="show-container ">
+    <div class="modal-body row align-items-end d-flex align-items-center">
+      <div class="col-md-5">
+        <% @offer.photos.each do |photo| %>
+          <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path photo.key, height: 300, width: 400, crop: :fill %>');">
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-7 align-self-center">
+        <div class="d-flex align-content-around flex-wrap m-3">
+          <h1><%= @offer.artist_name  %></h1>
         </div>
-      <% end %>
-    </div>
-    <div class="col-md-7 align-self-center">
-      <div class="d-flex align-content-around flex-wrap m-3">
-        <h1><%= @offer.artist_name  %></h1>
-      </div>
-      <div class="d-flex align-content-around flex-wrap m-3">
-        <p><%= @offer.description  %></p>
-      </div>
-      <div class="d-flex align-content-around flex-wrap m-3">
-        <a class="btn btn-ghost" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Book now</a>
+        <div class="d-flex align-content-around flex-wrap m-3">
+          <p><%= @offer.description  %></p>
+        </div>
+        <div class="d-flex align-content-around flex-wrap m-3">
+        <div class="neon-button">
+          <a data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Book now
+          </a>
+        </div>
+        </div>
       </div>
     </div>
   </div>

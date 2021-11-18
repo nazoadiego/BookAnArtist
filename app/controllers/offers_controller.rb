@@ -21,13 +21,13 @@ class OffersController < ApplicationController
       redirect_to @offer
     else
       flash[:alert] = 'The artist already exists'
-      render action: "index"
+      redirect_to '/offers'
     end
   end
 
   private
 
   def offer_params
-    params.require(:offer).permit(:artist_name, :description, photos: [])
+    params.require(:offer).permit(:artist_name, :description, :price, photos: [])
   end
 end

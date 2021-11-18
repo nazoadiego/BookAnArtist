@@ -4,10 +4,7 @@ class Offer < ApplicationRecord
   has_many_attached :photos
 
   validates :artist_name, presence: true, uniqueness: { scope: :artist_name }
+  validates :price, presence: true
   include PgSearch::Model
-  pg_search_scope :search_by_artist_name_and_decription,
-  against: [ :artist_name, :description ],
-    using: {
-      tsearch: { prefix: true }
-    }
+  pg_search_scope :search_by_artist_name_and_decription, against: [ :artist_name, :description ], using: { tsearch: { prefix: true } }
 end

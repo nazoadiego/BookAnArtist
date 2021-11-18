@@ -31,6 +31,7 @@ puts 'Users created'
 offer1 = Offer.create(
   artist_name: 'Andrea Boccelli',
   description: 'The Coolest Italian there will ever be. I am sorry Filippo. #SorryNotSorry',
+  price: 6_500,
   user: User.last
 )
 offer1.photos.attach(
@@ -42,6 +43,7 @@ offer1.photos.attach(
 offer2 = Offer.create(
   artist_name: 'Ariana Grande',
   description: 'I am more grande than your mother and you know it. Pero like... no hate.',
+  price: 1200,
   user: User.first
 )
 
@@ -54,6 +56,7 @@ offer2.photos.attach(
 offer3 = Offer.create(
   artist_name: 'Bad Bunny',
   description: 'Yo no soy tu pana pero le vamos a dar duro a esta party.',
+  price: 600,
   user: User.first
 )
 
@@ -66,6 +69,7 @@ offer3.photos.attach(
 offer4 = Offer.create(
   artist_name: 'Beyonce',
   description: 'I am your Queen B and that is all you need to know.',
+  price: 150_000,
   user: User.first
 )
 
@@ -78,6 +82,7 @@ offer4.photos.attach(
 offer5 = Offer.create(
   artist_name: 'Justin Bieber',
   description: 'I am open to perform to "non-beliebers"',
+  price: 1000,
   user: User.first
 )
 
@@ -90,6 +95,7 @@ offer5.photos.attach(
 offer6 = Offer.create(
   artist_name: 'Bruno Mars',
   description: '24k Magic Payments be gucci too',
+  price: 24_000,
   user: User.last
 )
 
@@ -102,6 +108,7 @@ offer6.photos.attach(
 offer7 = Offer.create(
   artist_name: 'BTS',
   description: 'Boys with Luv for our ARMY.',
+  price: 888_000,
   user: User.last
 )
 
@@ -114,6 +121,7 @@ offer7.photos.attach(
 offer8 = Offer.create(
   artist_name: 'DJ Khaled',
   description: 'Anotha One. I got the 🔑s. And you know, all that.',
+  price: 2800,
   user: User.last
 )
 
@@ -126,6 +134,7 @@ offer8.photos.attach(
 offer9 = Offer.create(
   artist_name: 'Drake',
   description: 'I am your Champagne Papi.',
+  price: 2500,
   user: User.last
 )
 
@@ -138,6 +147,7 @@ offer9.photos.attach(
 offer10 = Offer.create(
   artist_name: 'Elton John',
   description: 'Don\'t shoot me, I\'m just the piano player!',
+  price: 1000,
   user: User.last
 )
 
@@ -150,6 +160,7 @@ offer10.photos.attach(
 offer11 = Offer.create(
   artist_name: 'Eminem',
   description: 'I am the Real Slim Shady',
+  price: 750,
   user: User.last
 )
 
@@ -162,6 +173,7 @@ offer11.photos.attach(
 offer12 = Offer.create(
   artist_name: 'Foo Fighters',
   description: 'They are all pretenders...',
+  price: 650,
   user: User.first
 )
 
@@ -174,6 +186,7 @@ offer12.photos.attach(
 offer13 = Offer.create(
   artist_name: 'Jay Z',
   description: 'I got 99 problems but a b... ain\'t one',
+  price: 99_000,
   user: User.first
 )
 
@@ -186,6 +199,7 @@ offer13.photos.attach(
 offer14 = Offer.create(
   artist_name: 'Jennifer Lopez',
   description: 'Sorry Legna from the block, JLO IS HERE.',
+  price: 10_800,
   user: User.first
 )
 
@@ -198,6 +212,7 @@ offer14.photos.attach(
 offer15 = Offer.create(
   artist_name: 'Kanye West',
   description: 'You know you can\'t Rome without Caesar. Or without Yeezy...',
+  price: 80_500,
   user: User.first
 )
 
@@ -210,6 +225,7 @@ offer15.photos.attach(
 offer16 = Offer.create(
   artist_name: 'Prince',
   description: 'But life is just a party, and parties weren\'t meant to last.',
+  price: 80_000,
   user: User.last
 )
 
@@ -222,6 +238,7 @@ offer16.photos.attach(
 offer17 = Offer.create(
   artist_name: 'Red Hot Chili Peppers',
   description: 'By the way I tried to say I\'d be there...',
+  price: 8_000,
   user: User.last
 )
 
@@ -234,6 +251,7 @@ offer17.photos.attach(
 offer18 = Offer.create(
   artist_name: 'Rihanna',
   description: 'Please join me under my umbrella.',
+  price: 50_000,
   user: User.last
 )
 
@@ -246,6 +264,7 @@ offer18.photos.attach(
 offer19 = Offer.create(
   artist_name: 'Shawn Mendes',
   description: 'Baby there\'s nothing holding me back!',
+  price: 3_000,
   user: User.last
 )
 
@@ -258,6 +277,7 @@ offer19.photos.attach(
 offer20 = Offer.create(
   artist_name: 'Stevie Wonder',
   description: 'Part-Time... Performer?',
+  price: 8_000,
   user: User.last
 )
 

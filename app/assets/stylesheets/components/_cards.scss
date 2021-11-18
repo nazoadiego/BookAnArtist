@@ -15,8 +15,7 @@
 
 
 .card-img-top {
-  height: 180px;
-  object-fit: cover;
+  height: 100%;
 }
 
 .card-body {
@@ -59,7 +58,7 @@
   font-size: 20px;
 }
 
-  p {
+p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   position:absolute;
   bottom: 0;

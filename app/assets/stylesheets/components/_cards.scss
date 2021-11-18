@@ -42,24 +42,6 @@
   height: 80%
 }
 
-<<<<<<< HEAD
-.movies {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 0;
-  grid-gap: 0;
-  img {
-    padding: 0;
-    transition: transform 0.25s ease;
-  }
-  img:hover {
-    transform: scale(1.4);
-  }
-}
-
-ul {
-  list-style: none;
-=======
 .card-title  {
   position: absolute;
 
@@ -86,5 +68,4 @@ ul {
   // padding-bottom: 30px;
   font-size: 28px;
 
->>>>>>> 12c031554016a4c57a5ec5b94b54e98edf8da3a7
 }

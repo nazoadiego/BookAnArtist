@@ -6,4 +6,5 @@
 
     <h4>Start Time: <%= @booking.start_time %></h4>
     <h4>End Time: <%= @booking.end_time %></h4>
+    <h4>Total Price: €<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
 </div>

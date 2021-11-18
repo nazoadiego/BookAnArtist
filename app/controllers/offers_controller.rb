@@ -1,6 +1,10 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.all
+    if params[:query].present?
+      @offers = Offer.search_by_artist_name_and_decription(params[:query])
+    else
+      @offers = Offer.all
+    end
     @offer = Offer.new
   end
 

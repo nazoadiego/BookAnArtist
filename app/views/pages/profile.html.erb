@@ -1,37 +1,45 @@
-<h1>Welcome <%= @profile_user.first_name %>!</h1>
+<div class="title-dash m-2">
+  <h1>Welcome <%= @profile_user.first_name %>!</h1>
+</div>
 
-<h2>My Posts</h2>
-<% @offerscreated.each do |offer| %>
-  <div class="offer">
-    <h3><%= offer.artist_name %></h3>
-    <h5>Booking Requests for <%= offer.artist_name %></h5>
-    <% offer.bookings.each do |booking| %>
-      <h6>
-      <%= booking.start_time %>
-      <%= booking.end_time %>
-      <% if booking.status == 'pending' %>
-        <div class="btn">
-          <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id %>
-        </div>
-        <div class="btn">
-          <%= button_to "Reject", controller: "pages", action: "reject", id: booking.id %>
-        </div>
-      <% else %>
-        <%= booking.status %>
-      <% end %>
-      </h6>
+<div class="main-dashboard m-5">
+  <div class="dash1">
+    <h2>My Posts</h2>
+    <% @offerscreated.each do |offer| %>
+      <div class="offer my-4">
+        <h3><%= offer.artist_name %></h3>
+        <h5 class="my-3">Booking Requests for <%= offer.artist_name %></h5>
+        <% offer.bookings.each do |booking| %>
+          <h6>
+          <%= booking.start_time %>
+          <%= booking.end_time %>
+          <% if booking.status == 'pending' %>
+            <div class="btn">
+              <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id %>
+            </div>
+            <div class="btn">
+              <%= button_to "Reject", controller: "pages", action: "reject", id: booking.id %>
+            </div>
+          <% else %>
+            <%= booking.status %>
+          <% end %>
+          </h6>
+        <% end %>
+      </div>
     <% end %>
   </div>
-<% end %>
 
-<h2>Booking Requests</h2>
-<% @profile_user.user_bookings.each do |booking| %>
-  <div class="booking">
-    <strong>Artist:</strong> <%= booking.offer.artist_name %>
-    <strong>Start Time:</strong> <%= booking.start_time %>
-    <strong>End Time:</strong> <%= booking.end_time %>
-    <strong>Status:</strong> <%= booking.status %>
-    <strong>Total Price:</strong> €<%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %>
+  <div class="dash2 mt-5">
+    <h2>Booking Requests</h2>
+    <% @profile_user.user_bookings.each do |booking| %>
+      <div class="booking">
+        <strong>Artist:</strong> <%= booking.offer.artist_name %>
+        <strong>Start Time:</strong> <%= booking.start_time %>
+        <strong>End Time:</strong> <%= booking.end_time %>
+        <strong>Status:</strong> <%= booking.status %>
+        <strong>Total Price:</strong> €<%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %>
+      </div>
+      <br>
+    <% end %>
   </div>
-  <br>
-<% end %>
+</div>

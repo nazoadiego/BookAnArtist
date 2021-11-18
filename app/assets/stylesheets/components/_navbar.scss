@@ -1,20 +1,20 @@
-.navbar-lewagon {
-  font-family: 'ranga', cursive;
+.navbar-dark {
   justify-content: space-between;
   font-size: 1.5rem;
-  background: #d3d5db;
-  height: 50px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  height: 60px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-dark .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand {
+.navbar-dark .navbar-brand {
   width: 40px;
+  font-family: 'ranga', cursive;
 }
 
-.dropdown{
-    display: flex;
-    align-items: center;
+.dropdown {
+  display: flex;
+  align-items: center;
 }

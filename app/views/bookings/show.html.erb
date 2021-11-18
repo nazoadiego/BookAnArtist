@@ -26,4 +26,5 @@
       </a>
     </div>
   <% end %>
+  <h4>Total Price: €<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
 </div>

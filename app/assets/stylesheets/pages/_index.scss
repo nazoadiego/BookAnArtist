@@ -3,9 +3,26 @@
 @import "show";
 @import "offers";
 
+body {
+  background-color: #fdfdfd;
+  color: #000
+}
+
+h1 {
+  margin: 36px;
+  color: #000;
+  // font-family: Arial, Helvetica, sans-serif ;
+  font-family: 'Syncopate', sans-serif;
+  text-shadow:black;
+}
+
 p {
   font-size: 28px;
-  color: white;
+  color: #2f2f2f;
+}
+
+#logo {
+  font-family: 'ranga', cursive;
 }
 
 // Styling for forms
@@ -15,28 +32,6 @@ p {
     color: black;
   }
 }
-
-// Gradient animation for background
-
-body {
-  // background-color: #343A40;
-  background: linear-gradient(-45deg, #c43ad6, #000, #6a307c, #4e124e);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
-}
-
-// @keyframes gradient {
-// 	0% {
-// 		background-position: 0% 50%;
-// 	}
-// 	50% {
-// 		background-position: 100% 50%;
-// 	}
-// 	100% {
-// 		background-position: 0% 50%;
-// 	}
-// }
 
 // Gradient color text
 

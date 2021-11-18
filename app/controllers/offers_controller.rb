@@ -14,18 +14,20 @@ class OffersController < ApplicationController
   end
 
   def create
+    @offers = Offer.all
     @offer = Offer.new(offer_params)
     @offer.user = current_user
     if @offer.save
       redirect_to @offer
     else
-      render 'offers/show'
+      flash[:alert] = 'The artist already exists'
+      redirect_to '/offers'
     end
   end
 
   private
 
   def offer_params
-    params.require(:offer).permit(:artist_name, :description, photos: [])
+    params.require(:offer).permit(:artist_name, :description, :price, photos: [])
   end
 end

@@ -18,6 +18,10 @@
             <img class="card-img-top" src="<%= cl_image_path offer.photos.first.key, crop: :fill, height: 300 %>" alt="Card image cap">
           <% end %>
             </a>
+            <div class="card-body">
+            <h2 class="card-title btn btn-outline-fair btn-lg"><%= link_to offer.artist_name, offer_path(offer) %></h5>
+            <p class="card-title">€<%= number_with_precision(offer.price, :precision => 2, :delimiter => '.', :separator => ',') %> per night</p>
+
             </div>
          </div>
       <% end %>
@@ -43,6 +47,7 @@
           <div class="form-inputs">
             <%= f.input :artist_name %>
             <%= f.input :description %>
+            <%= f.input :price %>
             <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           </div>
           <div class="modal-footer">

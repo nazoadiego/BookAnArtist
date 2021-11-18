@@ -5,8 +5,8 @@ class Offer < ApplicationRecord
   validates :artist_name, presence: true
   include PgSearch::Model
   pg_search_scope :search_by_artist_name_and_decription,
-  against: [ :artist_name, :description ],
-    using: {
-      tsearch: { prefix: true }
-    }
+                  against: [ :artist_name, :description ],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end

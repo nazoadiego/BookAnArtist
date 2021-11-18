@@ -11,8 +11,8 @@
 }
 
 .links {
-  background-color: lightgrey;
-  text-align: left;
+  background-color: gainsboro;
+  text-align: center;
   font-size: 25px;
   padding-top: 30px;
   padding-left: 16px;
@@ -20,12 +20,11 @@
 }
 
 .address{
-  background-color: lightgrey;
+  background-color: gainsboro;
   ul {
     list-style: none;
     text-align: right;
 
-    // padding-left: 16px;
   }
 
   p{

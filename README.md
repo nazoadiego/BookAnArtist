@@ -38,3 +38,6 @@
 - [x] Make the whole card a link
 - [x] Make card image the one from the offer
 - [x] Make the cards rounded
+
+# Login
+- [ ] Navbar is messed up when you are in the login page

@@ -147,8 +147,8 @@
 }
 
 .btn-ghost-post {
-  background-color: rgb(174, 137, 185);
-  color: #FFFF;
+  background-color: white;
+  color: black;
   border: 1px solid #FFFF;
   padding: 8px 24px;
   border-radius: 50px;
@@ -160,9 +160,9 @@
 }
 
 .btn-ghost-post:hover {
+  background-color: rgb(174, 137, 185);
+  color: #FFFF;
   opacity: 1;
-  background-color: white;
-  color: black;
 }
 
 #login-btn {
@@ -177,6 +177,7 @@
 
 .yellow-neon-button {
   font-family: 'Oswald', sans-serif;
+  cursor: pointer;
   a {
     position: relative;
     display: inline-block;
@@ -231,6 +232,7 @@
 
 .neon-button {
   font-family: 'Oswald', sans-serif;
+  cursor: pointer;
   a {
     position: relative;
     display: inline-block;

@@ -1,10 +1,30 @@
-<div class="container text-center col-md-8 h-300">
-<h1>Booking Details</h1>
-    <h2>Artist</h2>
-    <div id="booking-container">
-    <h2><%= @offer.artist_name %></h2>
-
-    <h4>Start Time: <%= @booking.start_time %></h4>
-    <h4>End Time: <%= @booking.end_time %></h4>
-    <h4>Total Price: €<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
+<div class="container d-flex flex-column justify-content-center text-center col-md-8 h-300">
+  <h1> <%= @offer.artist_name %></h1>
+  <h2><%=  %></h2>
+  <h2>Booking Details</h2>
+  <h4>Start Time: <%= @booking.start_time %></h4>
+  <h4>End Time: <%= @booking.end_time %></h4>
+  <h2>Status</h2>
+  <% if @booking.status = 'pending' %>
+    <div class="yellow-neon-button" id="status-btn">
+      <a>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Pending
+      </a>
+    </div>
+  <% else %>
+    <div class="neon-button" id="status-btn">
+      <a>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Accepted
+      </a>
+    </div>
+  <% end %>
+  <h4>Total Price: €<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
 </div>

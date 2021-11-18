@@ -13,6 +13,7 @@
 Booking.destroy_all
 Offer.destroy_all
 User.destroy_all
+
 10.times do
   new_user = User.new(
     first_name: Faker::Name.name,
@@ -23,17 +24,255 @@ User.destroy_all
     password: 123_456
   )
   new_user.save!
-  new_offer = Offer.new(
-    artist_name: Faker::Music::Hiphop.artist,
-    description: Faker::Music::Prince.lyric,
-    user: new_user
-  )
-  new_offer.save!
-  new_booking = Booking.new(
-    start_time: Time.now,
-    end_time: Time.now + 20,
-    user: new_user,
-    offer: new_offer
-  )
-  new_booking.save!
 end
+
+puts 'Users created'
+
+offer1 = Offer.create(
+  artist_name: 'Andrea Boccelli',
+  description: 'The Coolest Italian there will ever be. I am sorry Filippo. #SorryNotSorry',
+  user: User.last
+)
+offer1.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/andrea.jpeg')),
+  filename: 'andrea.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer2 = Offer.create(
+  artist_name: 'Ariana Grande',
+  description: 'I am more grande than your mother and you know it. Pero like... no hate.',
+  user: User.first
+)
+
+offer2.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/ariana.jpeg')),
+  filename: 'ariana.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer3 = Offer.create(
+  artist_name: 'Bad Bunny',
+  description: 'Yo no soy tu pana pero le vamos a dar duro a esta party.',
+  user: User.first
+)
+
+offer3.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/bad-bunny.jpeg')),
+  filename: 'bad-bunny.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer4 = Offer.create(
+  artist_name: 'Beyonce',
+  description: 'I am your Queen B and that is all you need to know.',
+  user: User.first
+)
+
+offer4.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/Beyonce.jpeg')),
+  filename: 'Beyonce.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer5 = Offer.create(
+  artist_name: 'Justin Bieber',
+  description: 'I am open to perform to "non-beliebers"',
+  user: User.first
+)
+
+offer5.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/biebs.jpeg')),
+  filename: 'biebs.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer6 = Offer.create(
+  artist_name: 'Bruno Mars',
+  description: '24k Magic Payments be gucci too',
+  user: User.last
+)
+
+offer6.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/bruno.jpg')),
+  filename: 'bruno.jpg',
+  content_type: 'image/jpg'
+)
+
+offer7 = Offer.create(
+  artist_name: 'BTS',
+  description: 'Boys with Luv for our ARMY.',
+  user: User.last
+)
+
+offer7.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/bts.jpeg')),
+  filename: 'bts.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer8 = Offer.create(
+  artist_name: 'DJ Khaled',
+  description: 'Anotha One. I got the 🔑s. And you know, all that.',
+  user: User.last
+)
+
+offer8.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/djkhaled.jpeg')),
+  filename: 'djkhaled.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer9 = Offer.create(
+  artist_name: 'Drake',
+  description: 'I am your Champagne Papi.',
+  user: User.last
+)
+
+offer9.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/drake.jpeg')),
+  filename: 'drake.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer10 = Offer.create(
+  artist_name: 'Elton John',
+  description: 'Don\'t shoot me, I\'m just the piano player!',
+  user: User.last
+)
+
+offer10.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/elton.jpeg')),
+  filename: 'elton.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer11 = Offer.create(
+  artist_name: 'Eminem',
+  description: 'I am the Real Slim Shady',
+  user: User.last
+)
+
+offer11.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/Eminem.jpeg')),
+  filename: 'Eminem.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer12 = Offer.create(
+  artist_name: 'Foo Fighters',
+  description: 'They are all pretenders...',
+  user: User.first
+)
+
+offer12.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/foofighters.jpeg')),
+  filename: 'foofighters.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer13 = Offer.create(
+  artist_name: 'Jay Z',
+  description: 'I got 99 problems but a b... ain\'t one',
+  user: User.first
+)
+
+offer13.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/jayz.jpeg')),
+  filename: 'jayz.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer14 = Offer.create(
+  artist_name: 'Jennifer Lopez',
+  description: 'Sorry Legna from the block, JLO IS HERE.',
+  user: User.first
+)
+
+offer14.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/jlo.jpeg')),
+  filename: 'jlo.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer15 = Offer.create(
+  artist_name: 'Kanye West',
+  description: 'You know you can\'t Rome without Caesar. Or without Yeezy...',
+  user: User.first
+)
+
+offer15.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/kw.jpeg')),
+  filename: 'kw.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer16 = Offer.create(
+  artist_name: 'Prince',
+  description: 'But life is just a party, and parties weren\'t meant to last.',
+  user: User.last
+)
+
+offer16.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/prince.jpeg')),
+  filename: 'prince.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer17 = Offer.create(
+  artist_name: 'Red Hot Chili Peppers',
+  description: 'By the way I tried to say I\'d be there...',
+  user: User.last
+)
+
+offer17.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/RHCP.jpeg')),
+  filename: 'RHCP.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer18 = Offer.create(
+  artist_name: 'Rihanna',
+  description: 'Please join me under my umbrella.',
+  user: User.last
+)
+
+offer18.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/rihanna.jpeg')),
+  filename: 'rihanna.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer19 = Offer.create(
+  artist_name: 'Shawn Mendes',
+  description: 'Baby there\'s nothing holding me back!',
+  user: User.last
+)
+
+offer19.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/shawn.jpeg')),
+  filename: 'shawn.jpeg',
+  content_type: 'image/jpeg'
+)
+
+offer20 = Offer.create(
+  artist_name: 'Stevie Wonder',
+  description: 'Part-Time... Performer?',
+  user: User.last
+)
+
+offer20.photos.attach(
+  io: File.open(Rails.root.join('app/assets/images/seed/Stevie.jpeg')),
+  filename: 'Stevie.jpeg',
+  content_type: 'image/jpeg'
+)
+
+puts 'Offers created'
+
+# new_booking = Booking.new(
+#   start_time: Time.now,
+#   end_time: Time.now + 5,
+#   user: User.find(rand(1..10)),
+#   offer: Offer.find(rand(1..10))
+# )
+# new_booking.save!

@@ -14,12 +14,14 @@ class OffersController < ApplicationController
   end
 
   def create
+    @offers = Offer.all
     @offer = Offer.new(offer_params)
     @offer.user = current_user
     if @offer.save
       redirect_to @offer
     else
-      render 'offers/show'
+      flash[:alert] = 'The artist already exists'
+      render action: "index"
     end
   end
 

@@ -41,10 +41,12 @@
           <div class="form-inputs">
             <%= f.input :start_time, :as => :datetime %>
             <%= f.input :end_time, :as => :datetime %>
+            <%= f.input :message, :as => :text %>
           </div>
+          <%= @total %>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <%= f.button :submit, class: "btn btn-primary" %>
+            <%= f.button :submit, class: "btn btn-primary", value:"Request Booking" %>
           </div>
         <% end %>
       </div>

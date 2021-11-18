@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(book_params)
     @booking.offer = @offer
     @booking.user = current_user
+    @booking.total = total_price(@booking)
     if @booking.save
       redirect_to @booking
     else
@@ -17,9 +18,15 @@ class BookingsController < ApplicationController
     end
   end
 
+  def total_price(booking)
+    start = booking.start_time.hour
+    endtime = booking.end_time.hour
+    return (endtime - start) * booking.offer.price
+  end
+
   private
 
   def book_params
-    params.require(:booking).permit(:start_time, :end_time)
+    params.require(:booking).permit(:start_time, :end_time, :message)
   end
 end

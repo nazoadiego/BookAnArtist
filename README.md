@@ -8,20 +8,16 @@
 
 # Navbar
 - [ ] Find a good font for the navbar items
-- [ ] Change the icon from the navbar from an avatar to a dropdown icon
-- [ ] Change the color to black, possibly
-- [ ] Add shadow to the navbar
+- [x] Change the icon from the navbar from an avatar to a dropdown icon
+- [x] Change the color to black, possibly
+- [x] Add shadow to the navbar
 
 # Footer
 - [x] Probably needs to change the color a bit so it matches the rest of the page.
 
 # Homepage
-<<<<<<< HEAD
-- [ ] Big banner
 - [ ] Alert if you are already signed in so that you cannot access the buttons
-=======
 - [x] Video Banner
->>>>>>> master
 - [x] No navbar for landing page
 - [x] typewriter
 - [x] ghost button at the top right for Sign up
@@ -30,9 +26,10 @@
 
 # View
 - [ ] Position button at the top right corner
-- [ ] Create the pending neon button
+- [x] Create the pending neon button
 - [ ] Create a green create button (approved booking?)
 - [ ] Add a conditional to display a different button based on booking status
+- [ ] Fix the small margin to the right of the navbar
 
 # Index
 - [x] Make the whole card a link

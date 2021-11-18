@@ -17,10 +17,10 @@
 }
 
 .btn-flat {
+  background: #1EDD88;
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
   transition: background 0.3s ease;
 }
 
@@ -147,22 +147,21 @@
 }
 
 .btn-ghost-post {
-  background-color: rgb(174, 137, 185);
-  color: #FFFF;
+  background-color: black;
+  color: white;
   border: 1px solid #FFFF;
-  padding: 8px 24px;
+  padding: 0.75rem 0.75rem;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   // display: inline-block;
-  padding: 0.75rem 0.75rem;
 }
 
 .btn-ghost-post:hover {
+  background-color: rgb(174, 137, 185);
+  color: #FFFF;
   opacity: 1;
-  background-color: white;
-  color: black;
 }
 
 #login-btn {
@@ -177,6 +176,7 @@
 
 .yellow-neon-button {
   font-family: 'Oswald', sans-serif;
+  cursor: pointer;
   a {
     position: relative;
     display: inline-block;
@@ -231,6 +231,7 @@
 
 .neon-button {
   font-family: 'Oswald', sans-serif;
+  cursor: pointer;
   a {
     position: relative;
     display: inline-block;

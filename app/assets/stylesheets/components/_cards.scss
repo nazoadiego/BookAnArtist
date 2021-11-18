@@ -5,8 +5,6 @@
     margin: 10px;
     // height: 300px;
     // flex-grow: 1;
-
-
   }
   .card:hover {
     transform: scale(1.2);
@@ -14,13 +12,6 @@
   }
 }
 
-.card-img, .card-img-top {
-// border-top-left-radius: 10px;
-// border-top-right-radius: 10px;
-// border-bottom-right-radius: 0px;
-// border-bottom-left-radius: 0px;
-
-}
 
 .card-img-top {
   height: 100%
@@ -45,8 +36,18 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-
-
 .card > a {
   height: 80%
+}
+
+.card-title  {
+  position: absolute;
+
+}
+
+.card-title > a {
+  color: white;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-top: 30px;
 }

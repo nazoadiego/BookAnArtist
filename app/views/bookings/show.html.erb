@@ -4,6 +4,7 @@
   <h2>Booking Details</h2>
   <h4>Start Time: <%= @booking.start_time %></h4>
   <h4>End Time: <%= @booking.end_time %></h4>
+  <h4>Messages/comments: <%= @booking.message %></h4>
   <h2>Status</h2>
   <% if @booking.status = 'pending' %>
     <div class="yellow-neon-button" id="status-btn">

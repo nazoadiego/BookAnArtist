@@ -7,16 +7,17 @@
 @import "myposts";
 @import "booking_dashboard";
 
+
 body {
   background-color: #fdfdfd;
-  color: #000
+  color: #000;
 }
 
 h1 {
   margin: 36px;
   color: #000;
   // font-family: Arial, Helvetica, sans-serif ;
-  font-family: 'Syncopate', sans-serif;
+  font-family: 'Roboto', monospace;
   text-shadow:black;
 }
 
@@ -39,8 +40,15 @@ p {
 
 // Gradient color text
 
-.text-gradient {
-  background: linear-gradient(to right, #30CFD0, #c43ad6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.white-text {
+  color: #fdfdfd;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.yellow-title {
+  color:#FCD000;
+  font-weight: bold;
 }

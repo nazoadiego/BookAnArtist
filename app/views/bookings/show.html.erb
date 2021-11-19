@@ -5,14 +5,14 @@
       <h1 class=" roboto-mono">BOOKING</h1>
     </div>
     <div class="black-background col-7 full-height d-flex flex-column align-items-center justify-content-center">
-      <h3 class="yellow-title">Message:</h3>
+      <h3 class="yellow-text">Message:</h3>
       <p class="white-text center-text"><%= @booking.message %></p>
-      <h3 class="yellow-title">Date:</h3>
+      <h3 class="yellow-text">Date:</h3>
       <p class="white-text">Start Time: <%= @booking.start_time %></p>
-      <h4>End Time: <%= @booking.end_time %></h4>
-      <h3 class="yellow-title">Total Price:</h3>
+      <p class="white-text">End Time: <%= @booking.end_time %></p>
+      <h3 class="yellow-text">Total Price:</h3>
       <h4>€<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
-      <h2 class="yellow-title">Status:</h2>
+      <h2 class="yellow-text">Status:</h2>
       <% if @booking.status = 'pending' %>
         <div class="yellow-neon-button" id="status-btn">
           <a>
@@ -24,7 +24,11 @@
           </a>
         </div>
       <% else %>
+<<<<<<< HEAD
         <div class="neon-button java" id="status-btn">
+=======
+        <div class="green-neon-button" id="status-btn">
+>>>>>>> master
           <a>
             <span></span>
             <span></span>

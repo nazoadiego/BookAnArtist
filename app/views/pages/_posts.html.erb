@@ -1,0 +1,48 @@
+<div class="dash1 ml-4">
+  <div class="row">
+    <% @offerscreated.each do |offer| %>
+      <div class="col-lg-4">
+        <h3><%= offer.artist_name %>, €<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %>/hr</h3>
+        <h5 class="my-3">Requests for <%= offer.artist_name %></h5>
+        <% offer.bookings.each do |booking| %>
+          <div class="card card-margin">
+            <div class="card-body pt-2">
+                <div class="widget-49">
+                    <div class="widget-49-title-wrapper">
+                        <div class="widget-49-date-primary">
+                            <span class="widget-49-date-day"><%= booking.start_time.day %></span>
+                            <span class="widget-49-date-month"><%= Date::ABBR_MONTHNAMES[(booking.start_time.month)] %></span>
+                        </div>
+                        <div class="widget-49-meeting-info">
+                            <span class="widget-49-pro-title"><%= booking.user.first_name %></span>
+                            <span class="widget-49-meeting-time"><%= booking.start_time.hour %>.00 to <%= booking.end_time.hour %>.00 Hrs</span>
+                            <span class="widget-49-pro-title">
+                              <% if booking.status == 'pending' %>
+                                <div class="btn">
+                                  <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id, status: "accepted" %>
+                                </div>
+                                <div class="btn2">
+                                  <%= button_to "Reject", controller: "pages", action: "accept", id: booking.id, status: "rejected" %>
+                                </div>
+                              <% else %>
+                                <% if booking.status == "accepted" %>
+                                  Status:<div style="color:green"> Accepted</div>
+                                <% elsif booking.status == "rejected" %>
+                                  Status:<div style="color:red"> Rejected</div>
+                                <% end %>
+                              <% end %>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="widget-49-meeting-action">
+                        <a href="#" class="btn btn-sm btn-flash-border-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+    <% end %>
+  </div>
+</div>

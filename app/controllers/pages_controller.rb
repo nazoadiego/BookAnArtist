@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   def accept
     @profile_user = current_user
     @booking = Booking.find(params[:id])
-    @booking.status = 'accepted'
+    @booking.status = params[:status]
     @booking.save!
     redirect_to '/profile'
   end

@@ -1,8 +1,17 @@
 <div class="profile-card">
-  <h1>Profile</h1>
-  <h1 class="ml-1">Profile Information</h1>
-  <p class="ml-2">Name: <%= @profile_user.first_name %> <%= @profile_user.last_name %></p>
-  <p class="ml-2">Email: <%= @profile_user.email %></p>
-  <p class="ml-2">Address: <%= @profile_user.address %></p>
-  <p class="ml-2">Phone: <%= @profile_user.phone_number %></p>
+  <h1 class="ml-1 text-white">Profile Information</h1>
+  <ul>
+    <li>
+      <p class="ml-2 text-white">Name: <%= @profile_user.first_name %> <%= @profile_user.last_name %></p>
+    </li>
+    <li>
+      <p class="ml-2 text-white">Email: <%= @profile_user.email %></p>
+    </li>
+    <li>
+      <p class="ml-2 text-white">Address: <%= @profile_user.address %></p>
+    </li>
+    <li>
+      <p class="ml-2 text-white">Phone: <%= @profile_user.phone_number %></p>
+    </li>
+  </ul>
 </div>

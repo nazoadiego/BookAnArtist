@@ -1,7 +1,7 @@
-<div class="dash1 ml-4">
+<div class="dash1 ml-4" style="height:95%">
   <div class="row">
     <% @offerscreated.each do |offer| %>
-      <div class="col-lg-4">
+      <div class="col-lg-4" style="height:90%">
         <h3><%= offer.artist_name %>, €<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %>/hr</h3>
         <h5 class="my-3">Requests for <%= offer.artist_name %></h5>
         <% offer.bookings.each do |booking| %>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="widget-49-meeting-action">
-                        <a href="#" class="btn btn-sm btn-flash-border-primary">View All</a>
+                        <a href='/bookings/<%= booking.id %>' class="btn btn-sm btn-flash-border-primary">View All</a>
                     </div>
                 </div>
             </div>

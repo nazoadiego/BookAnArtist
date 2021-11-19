@@ -177,6 +177,7 @@
 .yellow-neon-button {
   font-family: 'Oswald', sans-serif;
   cursor: pointer;
+
   a {
     position: relative;
     display: inline-block;
@@ -192,7 +193,7 @@
 
   a:hover {
     color: #ffd500;
-    background-color: #fcac00;
+    background-color: #ffd500;
     box-shadow: 0 0 10px #FCD000, 0 0 10px #FCD000, 0 0 40px #FCD000, 0 0 80px #FCD000;
     transition-delay: 1s;
   }
@@ -227,6 +228,9 @@
     right: 100%;
     transition: 1s;
   }
+}
+.yellow-neon-button:hover {
+    color: black;
 }
 
 .neon-button {

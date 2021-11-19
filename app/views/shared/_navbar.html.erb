@@ -1,6 +1,6 @@
 <div class="navbar navbar-dark bg-dark navbar-expand-sm">
   <%= link_to "/", class: "navbar-brand", id: "logo" do %>
-    BookAnArtist
+    Book An Artist
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@
               class: "form-control",
               placeholder: "Find an artist"
             %>
-          <%= submit_tag "Search", class: "btn btn-warning mr-4" %>
+          <%= submit_tag "Search", class: "btn btn-outline-light mr-4" %>
         <% end %>
       <% end %>
       <% if user_signed_in? %>

@@ -5,16 +5,17 @@
 @import "offers";
 @import "dashboard";
 @import "myposts";
+@import "booking_dashboard";
 
 
 body {
   margin: 0;
   background-color: #fdfdfd;
   color: #000;
+  margin: 0;
 }
 
 h1 {
-  margin: 36px;
   color: #000;
   // font-family: Arial, Helvetica, sans-serif ;
   font-family: 'Roboto', monospace;
@@ -27,7 +28,7 @@ p {
 }
 
 #logo {
-  font-family: 'ranga', cursive;
+  font-family: 'monoton';
 }
 
 // Styling for forms
@@ -42,6 +43,10 @@ p {
 
 .white-text {
   color: #fdfdfd;
+}
+
+.yellow-text {
+  color: #FCD000;
 }
 
 .center-text {

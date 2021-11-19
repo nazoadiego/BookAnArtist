@@ -16,11 +16,7 @@
           </div>
         </div>
         <div class="red col-3 profile" style="height: 100%">
-          <h1 class="ml-1">Profile Information</h1>
-          <p class="ml-2">Name: <%= @profile_user.first_name %> <%= @profile_user.last_name %></p>
-          <p class="ml-2">Email: <%= @profile_user.email %></p>
-          <p class="ml-2">Address: <%= @profile_user.address %></p>
-          <p class="ml-2">Phone: <%= @profile_user.phone_number %></p>
+          <%= render 'pages/profile_card' %>
         </div>
       </div>
     </div>

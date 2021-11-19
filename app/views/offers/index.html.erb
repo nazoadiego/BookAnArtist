@@ -5,11 +5,11 @@
   </div>
 </div>
 
-<div class="grid my-5">
+<div class="grid my-5" >
   <% @offers.each do |offer| %>
     <div>
       <div class="card">
-          <h2 class="card-title"><%= link_to offer.artist_name, offer_path(offer) %></h2>
+          <h2 class="card-title" ><%= link_to offer.artist_name, offer_path(offer) %></h2>
           <p id="price" class="card-title">€<%= number_with_precision(offer.price, :precision => 2, :delimiter => '.', :separator => ',') %></p>
         <a href="<%=offer_path(offer) %>">
           <% if offer.photos.first == nil %>

@@ -1,0 +1,13 @@
+<div class="dash2 mt-5">
+  <h2>Booking Requests</h2>
+  <% @profile_user.user_bookings.each do |booking| %>
+    <div class="booking">
+      <strong>Artist:</strong> <%= booking.offer.artist_name %>
+      <strong>Start Time:</strong> <%= booking.start_time %>
+      <strong>End Time:</strong> <%= booking.end_time %>
+      <strong>Status:</strong> <%= booking.status %>
+      <strong>Total Price:</strong> €<%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %>
+    </div>
+    <br>
+  <% end %>
+</div>

@@ -398,6 +398,7 @@
   transform: translate(5px, 5px);
 }
 
+
 .green-neon-button {
   font-family: 'Oswald', sans-serif;
   cursor: pointer;
@@ -455,4 +456,21 @@
 }
 .green-neon-button:hover {
     color: black;
+}
+
+
+.java-green {
+  color: #006600;
+  background-color: #006600;
+  box-shadow: 0 0 10px #008000, 0 0 10px #008000, 0 0 40px #008000, 0 0 80px #008000;
+  transition-delay: 1s;
+  color: black;
+}
+
+.java-yellow {
+  color: #ffd500;
+  background-color: #ffd500;
+  box-shadow: 0 0 10px #FCD000, 0 0 10px #FCD000, 0 0 40px #FCD000, 0 0 80px #FCD000;
+  transition-delay: 1s;
+  color: black;
 }

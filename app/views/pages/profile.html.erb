@@ -8,20 +8,15 @@
               <h1>Dashboard</h1>
             </div>
             <div class="blue" style="height: 75%">
-              <div class="row h-100 d-flex flex-stretch">
-                <div class="green col-7 mr-3">
-                  <h1>Calendar</h1>
-                </div>
-                <div class="green col-4">
-                  <h1>Cards</h1>
-                </div>
-              </div>
+              <%= render 'pages/posts' %>
             </div>
           </div>
         </div>
         <div class="red col-4"><h1>Profile</h1></div>
       </div>
     </div>
-    <div class="green" id="dash-bottom"><h1>bookings</h1></div>
+    <div class="green" id="dash-bottom"><h1>bookings</h1>
+      <%= render 'pages/bookings' %>
+    </div>
   </div>
 </div>

@@ -425,3 +425,11 @@
 .square-ani-btn:hover::before {
   transform: translate(5px, 5px);
 }
+
+.java {
+  color: #ffd500;
+  background-color: #ffd500;
+  box-shadow: 0 0 10px #FCD000, 0 0 10px #FCD000, 0 0 40px #FCD000, 0 0 80px #FCD000;
+  transition-delay: 1s;
+  color: black;
+}

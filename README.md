@@ -12,6 +12,7 @@
 - [x] Change the icon from the navbar from an avatar to a dropdown icon
 - [x] Change the color to black, possibly
 - [x] Add shadow to the navbar
+- [ ] No search or login button in the sign up/login page (fix the navbar conditionals)
 
 # Footer
 - [x] Probably needs to change the color a bit so it matches the rest of the page.

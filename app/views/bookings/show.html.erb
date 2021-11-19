@@ -13,9 +13,19 @@
       <h3 class="yellow-text">Total Price:</h3>
       <h4>€<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
       <h2 class="yellow-text">Status:</h2>
-      <% if @booking.status = 'pending' %>
+      <% if @booking.status == "accepted" %>
+        <div class="green-neon-button" id="status-btn">
+          <a id="pendings">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Accepted
+          </a>
+        </div>
+      <% elsif @booking.status = "pending" %>
         <div class="yellow-neon-button" id="status-btn">
-          <a>
+          <a id="pendings">
             <span></span>
             <span></span>
             <span></span>
@@ -23,18 +33,14 @@
             Pending
           </a>
         </div>
-      <% else %>
-<<<<<<< HEAD
-        <div class="neon-button java" id="status-btn">
-=======
-        <div class="green-neon-button" id="status-btn">
->>>>>>> master
-          <a>
+      <% elsif @booking.status = "rejected" %>
+        <div class="yellow-neon-button" id="status-btn">
+          <a id="pendings">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Accepted
+            Rejected
           </a>
         </div>
       <% end %>

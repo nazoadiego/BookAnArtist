@@ -1,5 +1,4 @@
 <div class="dash2">
-  <h2>Booking Requests</h2>
   <% @profile_user.user_bookings.each do |booking| %>
     <div class="booking">
       <strong>Artist:</strong> <%= booking.offer.artist_name %>

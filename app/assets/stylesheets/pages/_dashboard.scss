@@ -10,3 +10,23 @@
   background-color: rgba(200,200,200,0.1);
   padding: 10px
 }
+
+.red {
+  border: red 1px solid;
+}
+.green {
+  border: green 1px solid;
+}
+.blue {
+  border: blue 1px solid;
+}
+.full-height {
+  height: 100vh;
+}
+
+#dash-top {
+  flex: 0 0 66.66666667%;
+}
+#dash-bottom {
+  flex: 0 0 33.33333333%;
+}

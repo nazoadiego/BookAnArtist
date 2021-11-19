@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
   def total_price(booking)
     start = booking.start_time.hour
     endtime = booking.end_time.hour
-    return (endtime - start) * booking.offer.price
+    return (endtime - start) * booking.offer.price.to_i
   end
 
   private

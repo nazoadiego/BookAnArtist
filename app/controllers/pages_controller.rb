@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   def profile
     @profile_user = current_user
     @offerscreated = Offer.where(["user_id = '%s'", @profile_user.id])
+    @hide_footer = true
   end
 
   def accept

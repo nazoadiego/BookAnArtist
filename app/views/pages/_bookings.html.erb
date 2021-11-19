@@ -1,13 +1,22 @@
-<div class="dash2">
-  <h2>Booking Requests</h2>
-  <% @profile_user.user_bookings.each do |booking| %>
-    <div class="booking">
-      <strong>Artist:</strong> <%= booking.offer.artist_name %>
-      <strong>Start Time:</strong> <%= booking.start_time %>
-      <strong>End Time:</strong> <%= booking.end_time %>
-      <strong>Status:</strong> <%= booking.status %>
-      <strong>Total Price:</strong> €<%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %>
-    </div>
-    <br>
-  <% end %>
-</div>
+<table class="table booking">
+  <thead>
+    <tr>
+      <th scope="col">Artist:</th>
+      <th scope="col">Start Time:</th>
+      <th scope="col">End Time:</th>
+      <th scope="col">Status:</th>
+      <th scope="col">Total Price:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @profile_user.user_bookings.each do |booking| %>
+      <tr>
+        <th scope="row"><%= booking.offer.artist_name %></th>
+        <td><%= booking.start_time %></td>
+        <td><%= booking.end_time %></td>
+        <td><%= booking.status %></td>
+        <td><%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

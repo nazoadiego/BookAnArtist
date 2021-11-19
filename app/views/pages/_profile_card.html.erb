@@ -1,17 +1,33 @@
 <div class="profile-card">
-  <h1 class="ml-1 text-white">Profile Information</h1>
-  <ul>
-    <li>
-      <p class="ml-2 text-white">Name: <%= @profile_user.first_name %> <%= @profile_user.last_name %></p>
-    </li>
-    <li>
-      <p class="ml-2 text-white">Email: <%= @profile_user.email %></p>
-    </li>
-    <li>
-      <p class="ml-2 text-white">Address: <%= @profile_user.address %></p>
-    </li>
-    <li>
-      <p class="ml-2 text-white">Phone: <%= @profile_user.phone_number %></p>
-    </li>
-  </ul>
+  <div class="d-flex flex-column align-items-between">
+      <h3 class="ml-4 mt-3 yellow-title">
+        Profile Information
+      </h3>
+    <ul>
+      <li>
+        <h3 class="yellow-text">
+          Name:
+        </h3>
+        <p class="ml-1 text-white"> <%= @profile_user.first_name %> <%= @profile_user.last_name %></p>
+      </li>
+      <li>
+        <h3 class="yellow-text">
+          Email:
+        </h3>
+        <p class="ml-1 text-white"><%= @profile_user.email %></p>
+      </li>
+      <li>
+        <h3 class="yellow-text">
+          Address:
+        </h3>
+        <p class="ml-1 text-white"> <%= @profile_user.address %></p>
+      </li>
+      <li>
+        <h3 class="yellow-text">
+          Phone:
+        </h3>
+        <p class="ml-1 text-white"> <%= @profile_user.phone_number %></p>
+      </li>
+    </ul>
+  </div>
 </div>

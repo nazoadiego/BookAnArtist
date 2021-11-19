@@ -1,0 +1,26 @@
+<div class="dash1 ml-4">
+  <div class="post-dash">
+    <% @offerscreated.each do |offer| %>
+      <div class="offer my-4">
+        <h3><%= offer.artist_name %></h3>
+        <h5 class="my-3">Booking Requests for <%= offer.artist_name %></h5>
+        <% offer.bookings.each do |booking| %>
+          <h6>
+          <%= booking.start_time %>
+          <%= booking.end_time %>
+          <% if booking.status == 'pending' %>
+            <div class="btn">
+              <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id %>
+            </div>
+            <div class="btn">
+              <%= button_to "Reject", controller: "pages", action: "reject", id: booking.id %>
+            </div>
+          <% else %>
+            <%= booking.status %>
+          <% end %>
+          </h6>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,37 +1,28 @@
-<h1>Welcome <%= @profile_user.first_name %>!</h1>
-
-<h2>My Posts</h2>
-<% @offerscreated.each do |offer| %>
-  <div class="offer">
-    <h3><%= offer.artist_name %></h3>
-    <h5>Booking Requests for <%= offer.artist_name %></h5>
-    <% offer.bookings.each do |booking| %>
-      <h6>
-      <%= booking.start_time %>
-      <%= booking.end_time %>
-      <% if booking.status == 'pending' %>
-        <div class="btn">
-          <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id %>
+<div class="blue full-height">
+  <div class="d-flex flex-column align-items-stretch justify-content-stretch h-100">
+    <div class="green" id="dash-top" style="height: 70%">
+      <div class="row" style="height: 70vh">
+        <div class="red col-8" style="height: 100%">
+          <div class="row d-flex flex-column flex-nowrap justify-content-stretch" style="height: 100%">
+            <div class="blue" style="height: 25%">
+              <h1>Dashboard</h1>
+            </div>
+            <div class="blue" style="height: 75%">
+              <h2 class="ml-4">My Posts</h2>
+              <%= render 'pages/posts' %>
+            </div>
+          </div>
         </div>
-        <div class="btn">
-          <%= button_to "Reject", controller: "pages", action: "reject", id: booking.id %>
+        <div class="red col-4" style="height: 100%">
+          <h1>Profile</h1>
         </div>
-      <% else %>
-        <%= booking.status %>
-      <% end %>
-      </h6>
-    <% end %>
+      </div>
+    </div>
+    <div class="green" id="dash-bottom" style="height: 30%">
+      <h1 style="height: 15%">Booking Requests</h1>
+        <div style="height: 85%">
+          <%= render 'pages/bookings' %>
+        </div>
+    </div>
   </div>
-<% end %>
-
-<h2>Booking Requests</h2>
-<% @profile_user.user_bookings.each do |booking| %>
-  <div class="booking">
-    <strong>Artist:</strong> <%= booking.offer.artist_name %>
-    <strong>Start Time:</strong> <%= booking.start_time %>
-    <strong>End Time:</strong> <%= booking.end_time %>
-    <strong>Status:</strong> <%= booking.status %>
-    <strong>Total Price:</strong> €<%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %>
-  </div>
-  <br>
-<% end %>
+</div>

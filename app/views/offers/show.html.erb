@@ -1,32 +1,41 @@
-<div class="modal-body row align-items-end d-flex align-items-center">
-  <div class="col-md-5">
-    <% @offer.photos.each do |photo| %>
-      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= cl_image_path photo.key, height: 300, width: 400, crop: :fill %>');">
-      </div>
-    <% end %>
-  </div>
-  <div class="col-md-7 d-flex flex-d flex-column justify-content-between">
-    <div class="flex-wrap d-flex justify-content-around align-items-center">
-      <div>
-        <h1><%= @offer.artist_name %></h1>
-      </div>
-      <div class="neon-button mr-5">
-        <a data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Book now
-        </a>
+<body style="background-image: url(https://www.ppt-backgrounds.net/thumbs/abstract-yellow-wave-templates.jpeg);">
+  <div class="modal-body row align-items-end d-flex align-items-center" id="no-padding">
+    <div class="col-md-7">
+      <% @offer.photos.each do |photo| %>
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= cl_image_path photo.key, height: 800, width: 1000, crop: :fill %>');">
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-5 d-flex flex-d flex-column justify-content-between">
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="flex-wrap d-flex justify-content-around align-items-center">
+          <div class="snake-button mr-5">
+            <a data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Book now
+            </a>
+          </div>
+          <div class="snake-button ml-5">
+            <a href="<%= offers_path %>">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Go back
+            </a>
+          </div>
+        </div>
+        <div>
+          <h1 class="roboto-mono"><%= @offer.artist_name %></h1>
+          <p><%= @offer.description %></p>
+        </div>
       </div>
     </div>
-    <div class="flex-wrap text-center">
-      <p><%= @offer.description %></p>
-    </div>
   </div>
-</div>
-
-<%= link_to "Back", offers_path %>
+</body>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

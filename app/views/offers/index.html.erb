@@ -5,12 +5,12 @@
   </div>
 </div>
 
-<div class="grid my-5">
+<div class="grid my-5" >
   <% @offers.each do |offer| %>
     <div>
       <div class="card">
-          <h2 class="card-title"><%= link_to offer.artist_name, offer_path(offer) %></h2>
-          <p id="price" class="card-title">€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %>/hr</p>
+          <h2 class="card-title" ><%= link_to offer.artist_name, offer_path(offer) %></h2>
+          <p id="price" class="card-title">€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
         <a href="<%=offer_path(offer) %>">
           <% if offer.photos.first == nil %>
             <img class="card-img-top" src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1769&q=80" alt="Card image cap">

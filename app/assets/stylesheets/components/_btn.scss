@@ -156,11 +156,13 @@
   opacity: 1;
   transition: all 0.3s ease;
   // display: inline-block;
+  font-family: monospace;
 }
 
 .btn-ghost-post:hover {
-  background-color: rgb(174, 137, 185);
-  color: #FFFF;
+  font-family: monospace;
+  background-color: #FCD000;
+  color:black;
   opacity: 1;
 }
 

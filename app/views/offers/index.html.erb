@@ -1,53 +1,55 @@
-<div class="head-index row justify-content-between align-items-center mx-3 mt-5">
-  <h1 class="text-left m-0" id="text-left">Artists to Book</h1>
-  <div class="text-right">
-    <button type="button" class="btn btn-ghost-post" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create a Post</button>
-  </div>
-</div>
-
-<div class="grid my-5" >
-  <% @offers.each do |offer| %>
-    <div>
-      <div class="card">
-          <h2 class="card-title" ><%= link_to offer.artist_name, offer_path(offer) %></h2>
-          <p id="price" class="card-title">€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
-        <a href="<%=offer_path(offer) %>">
-          <% if offer.photos.first == nil %>
-            <img class="card-img-top" src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1769&q=80" alt="Card image cap">
-          <% else %>
-            <img class="card-img-top" src="<%= cl_image_path offer.photos.first.key, crop: :fill  %>" alt="Card image cap">
-          <% end %>
-        </a>
-      </div>
+<div class="mx-3">
+  <div class="head-index row justify-content-between align-items-center mx-3 mt-5">
+    <h1 class="text-left m-0" id="text-left">Artists to Book</h1>
+    <div class="text-right">
+      <button type="button" class="btn btn-ghost-post" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create a Post</button>
     </div>
-  <% end %>
-</div>
+  </div>
 
-<%# FORM %>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Offer your artistry</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <div class="grid my-3" >
+    <% @offers.each do |offer| %>
+      <div>
+        <div class="card">
+            <h2 class="card-title" ><%= link_to offer.artist_name, offer_path(offer) %></h2>
+            <p id="price" class="card-title">€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+          <a href="<%=offer_path(offer) %>">
+            <% if offer.photos.first == nil %>
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1769&q=80" alt="Card image cap">
+            <% else %>
+              <img class="card-img-top" src="<%= cl_image_path offer.photos.first.key, crop: :fill  %>" alt="Card image cap">
+            <% end %>
+          </a>
+        </div>
       </div>
-      <div class="modal-body">
-        <%= simple_form_for(@offer) do |f| %>
+    <% end %>
+  </div>
 
-          <div class="form-inputs">
-            <%= f.input :artist_name %>
-            <%= f.input :description %>
-            <%= f.input :price %>
-            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <%= f.button :submit, class: "btn btn-primary" %>
-          </div>
-        <% end %>
+  <%# FORM %>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Offer your artistry</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for(@offer) do |f| %>
+
+            <div class="form-inputs">
+              <%= f.input :artist_name %>
+              <%= f.input :description %>
+              <%= f.input :price %>
+              <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <%= f.button :submit, class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

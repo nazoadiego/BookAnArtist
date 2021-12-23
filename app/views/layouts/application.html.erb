@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,9 @@
       <%= render 'shared/navbar' %>
     <% end %>
     <div id="page-container">
-      <%= yield %>
+    <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
+    </main>
     </div>
     <%= render 'shared/alerts' %>
     <% unless @hide_footer %>

@@ -9,3 +9,30 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  position: relative;
+  background-color: #fdfdfd;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 28px;
+  color: #2f2f2f;
+}
+
+#logo {
+  font-family: 'monoton';
+}
+
+// Styling for forms
+
+.form-inputs {
+  label {
+    color: black;
+  }
+}
+
+// Gradient color text

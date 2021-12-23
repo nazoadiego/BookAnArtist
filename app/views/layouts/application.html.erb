@@ -25,12 +25,11 @@
       <%= render 'shared/navbar' %>
     <% end %>
 
-    <div id="page-container">
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="min-h-screen flex justify-center">
         <%= yield %>
     </main>
-    </div>
     <%= render 'shared/alerts' %>
+
     <% unless @hide_footer %>
       <%= render "shared/footer" %>
     <% end %>

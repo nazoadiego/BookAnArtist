@@ -1,3 +1,6 @@
+<h2>Find your perfect concert</h2>
+<p>Your favorite artists are returning to the stages</p>
+
 <h2>Categories</h2>
 
 <div class="grid grid-cols-3 gap-1">
@@ -22,16 +25,14 @@
 
 <div class="grid grid-cols-4 gap-1">
     <% @offers.each do |offer| %>
-      <div class="card-artist">
-        <h3><%= link_to offer.artist_name, offer_path(offer) %></h3>
-        <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+      <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fit  %>')">
+        <div class="card-img-bottom">
+          <h3><%= link_to offer.artist_name, offer_path(offer) %></h3>
+          <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+        </div>
       </div>
     <% end %>
 </div>
-
-
-
-
 
 
 <%# Old grid %>

@@ -9,3 +9,24 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: #21242E;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  font-family: 'monoton';
+}
+
+// Styling for forms
+
+.form-inputs {
+  label {
+    color: black;
+  }
+}
+
+// Gradient color text

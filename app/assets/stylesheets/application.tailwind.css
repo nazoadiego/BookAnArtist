@@ -1,13 +1,30 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/*
+@layer base {
+  h1 {
+    @apply text-3xl font-extrabold;
+  }
 
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  .card-category {
+    height: 300px;
+    width: 100%;
+    @apply bg-cyan-400 rounded-xl shadow-lg flex justify-center items-center;
+  }
+
+  .card-artist {
+    height: 300px;
+    width: 100%;
+    @apply rounded-xl shadow-lg flex justify-start items-end;
   }
 }
 
-*/
+@tailwind components;
+@tailwind utilities;

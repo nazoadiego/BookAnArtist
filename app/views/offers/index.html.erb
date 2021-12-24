@@ -1,4 +1,53 @@
-<div class="head-index row justify-content-between align-items-center mx-3 mt-5">
+<h2>Find your perfect concert</h2>
+<p>Your favorite artists are returning to the stages!</p>
+
+<h2>Categories</h2>
+
+<div class="grid grid-cols-3 gap-1">
+  <div class="card-category">
+    <h3>
+      Hip hop
+    </h3>
+  </div>
+  <div class="card-category">
+    <h3>
+      Rock
+    </h3>
+  </div>
+  <div class="card-category">
+    <h3>
+      Pop
+    </h3>
+  </div>
+</div>
+
+<h2>All Artists</h2>
+
+<div class="grid grid-cols-4 gap-1">
+    <% @offers.each do |offer| %>
+
+
+      <%= link_to offer_path(offer) do %>
+
+
+        <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>')">
+          <div class="card-img-bottom">
+            <h3><%= offer.artist_name %></h3>
+            <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+          </div>
+        </div>
+
+
+      <% end %>
+
+
+    <% end %>
+</div>
+
+
+<%# Old grid %>
+
+<div class="hidden head-index row justify-content-between align-items-center mx-3 mt-5">
   <h1 class="text-left">Artists to Book</h1>
   <div class="text-right">
     <button type="button" class="btn btn-ghost-post" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create a Post</button>
@@ -8,8 +57,8 @@
     <% @offers.each do |offer| %>
       <div>
         <div class="card">
-            <h2 class="card-title" ><%= link_to offer.artist_name, offer_path(offer) %></h2>
             <p id="price" class="card-title">€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+            <h2 class="card-title" ><%= link_to offer.artist_name, offer_path(offer) %></h2>
           <a href="<%=offer_path(offer) %>">
             <% if offer.photos.first == nil %>
               <img class="card-img-top" src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1769&q=80" alt="Card image cap">

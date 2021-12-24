@@ -3,6 +3,11 @@
 .card-artist {
   background-size: cover;
   background-position: center;
+  transition: 0.4s ease;
+}
+
+.card-artist:hover {
+  transform: scale(1.05);
 }
 
 

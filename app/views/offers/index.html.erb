@@ -1,5 +1,5 @@
 <h2>Find your perfect concert</h2>
-<p>Your favorite artists are returning to the stages</p>
+<p>Your favorite artists are returning to the stages!</p>
 
 <h2>Categories</h2>
 
@@ -30,7 +30,7 @@
       <%= link_to offer_path(offer) do %>
 
 
-        <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>'); background-size: cover">
+        <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>')">
           <div class="card-img-bottom">
             <h3><%= offer.artist_name %></h3>
             <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>

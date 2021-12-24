@@ -1,9 +1,6 @@
 // Rework
 
-.category-card {
-  width: 400px;
-  height: 300px;
-}
+
 
 
 // old
@@ -40,30 +37,10 @@
 }
 
 .card-img-top {
-  transform: scale(1.05);
-  // box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-  opacity: 0.5;
+  width: 100%;
   z-index: -1;
-}
-
-
-
-  // .card-img-top:hover {
-  //   cursor: pointer;
-  //   color: white;
-  // }
-
-  // .card-img-top:hover::after {
-  //   height: 100%;
-  // }
-
-.card-img-top {
-  height: 40vh;
   object-fit: cover;
-  background-color:rgba(0, 0, 0, 0.5);
-
 }
-
 
 
 .card-body {

@@ -6,12 +6,17 @@
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-2xl;
   }
 
   h3 {
-    font-weight: 600;
-    @apply text-2xl;
+    @apply text-xl;
+  }
+
+  .card-category {
+    height: 300px;
+    width: 100%;
+    @apply bg-cyan-400 rounded-xl shadow-lg flex justify-center items-center;
   }
 }
 

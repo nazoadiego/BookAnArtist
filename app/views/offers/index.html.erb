@@ -25,12 +25,22 @@
 
 <div class="grid grid-cols-4 gap-1">
     <% @offers.each do |offer| %>
-      <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>'); background-size: cover">
-        <div class="card-img-bottom">
-          <h3><%= link_to offer.artist_name, offer_path(offer) %></h3>
-          <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+
+
+      <%= link_to offer_path(offer) do %>
+
+
+        <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>'); background-size: cover">
+          <div class="card-img-bottom">
+            <h3><%= offer.artist_name %></h3>
+            <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+          </div>
         </div>
-      </div>
+
+
+      <% end %>
+
+
     <% end %>
 </div>
 

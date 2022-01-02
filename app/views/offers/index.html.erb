@@ -1,11 +1,13 @@
 <h2>Find your perfect concert</h2>
 <p>Your favorite artists are returning to the stages!</p>
-<button class="btn bg-cyan-500 hover:bg-cyan-400">
-      Browse Artists
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 ml-2 stroke-current">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-  </svg>
-</button>
+<a href="#artists">
+  <button class="btn bg-cyan-500 hover:bg-cyan-400">
+        Browse Artists
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 ml-2 stroke-current">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </button>
+</a>
 
 <h2>Categories</h2>
 
@@ -53,7 +55,7 @@
 </div>
 
 
-<h2>All Artists</h2>
+<h2 id="artists">Artists</h2>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
     <% @offers.each do |offer| %>

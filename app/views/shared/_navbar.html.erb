@@ -1,13 +1,18 @@
 <%# DaisyUI navbar %>
 
 <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+
+
   <div class="px-2 mx-2 navbar-start">
     <span class="text-lg">
-            <%= link_to "/", class: "navbar-brand", id: "logo" do %>
-              Book An Artist
-            <% end %>
-          </span>
+      <%= link_to "/", class: "navbar-brand", id: "logo" do %>
+        Book An Artist
+      <% end %>
+    </span>
   </div>
+
+
+
   <div class="hidden px-2 mx-2 navbar-center lg:flex">
     <div class="flex items-stretch">
       <%= link_to "/offers", class: "transition hover:text-cyan-400" do %>
@@ -21,18 +26,23 @@
             </a>
     </div>
   </div>
+
+
   <div class="navbar-end">
     <%= form_tag offers_path, method: :get, class: 'search-form' do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control rounded-xl mr-2",
-      style: "color: black",
-      placeholder: "Find an artist"
-    %>
-    <%= submit_tag "Search", class: "mr-2 py-3 px-6 rounded-xl btn bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-400" %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control rounded-xl mr-2",
+        style: "color: black",
+        placeholder: "Find an artist"
+      %>
+      <%= submit_tag "Search", class: "mr-2 py-3 px-6 rounded-xl btn bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-400" %>
     <% end %>
-    <button class="btn">
-      <i class="fas fa-sign-out-alt"></i>
-    </button>
+
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <button class="btn">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+    <% end %>
   </div>
 </div>

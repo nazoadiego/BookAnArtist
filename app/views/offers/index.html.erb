@@ -16,7 +16,7 @@
 </div>
 
 
-<div class="second-block my-12">
+<div class="second-block my-8">
 
 
   <h2 class="my-6">Categories</h2>
@@ -66,10 +66,24 @@
 
 </div>
 
-<div class="third-block my-12">
+<div class="third-block my-8">
 
 
-  <h2 class="my-6" id="artists">Artists</h2>
+  <div class="w-full my-6 flex inline-flex justify-between items-center">
+
+    <h2 id="artists">
+      Artists
+    </h2>
+
+    <button class="btn bg-cyan-500 hover:bg-cyan-400">
+          New offer
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 ml-2 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+  </div>
+
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
       <% @offers.each do |offer| %>

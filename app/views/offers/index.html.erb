@@ -1,82 +1,100 @@
-<h2>Find your perfect concert</h2>
-<p>Your favorite artists are returning to the stages!</p>
-<a href="#artists">
-  <button class="btn bg-cyan-500 hover:bg-cyan-400">
-        Browse Artists
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 ml-2 stroke-current">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-    </svg>
-  </button>
-</a>
-
-<h2>Categories</h2>
+<div class="first-block my-12">
 
 
-<div class="flex flex-row w-full">
-  <div class="flex-grow">
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-full">
-      <div class="card-category">
-        <h3>
-          Hip hop
-        </h3>
-      </div>
-      <div class="card-category">
-        <h3>
-          Pop
-        </h3>
-      </div>
-      <div class="card-category">
-        <h3>
-          Rock
-        </h3>
-      </div>
-      <div class="card-category">
-        <h3>
-          R&B
-        </h3>
-      </div>
-    </div>
+  <h2>Find your perfect concert</h2>
+  <p>Your favorite artists are returning to the stages!</p>
+  <a href="#artists">
+    <button class="btn bg-cyan-500 hover:bg-cyan-400">
+          Browse Artists
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 ml-2 stroke-current">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </a>
 
 
-  </div>
-  <div class="divider divider-vertical"></div>
-
-  <div class="grid flex-grow h-32 bg-base-300 rounded-box place-items-center">
-    <% 5.times do %>
-      <div class="card-top-five">
-        <img src="<%= cl_image_path @offers.first.photos.first.key, crop: :fill %>" alt="" class="avatar">
-        <h3>
-          <%= @offers.first.artist_name %>
-        </h3>
-      </div>
-    <% end  %>
-  </div>
 </div>
 
 
-<h2 id="artists">Artists</h2>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-    <% @offers.each do |offer| %>
+<div class="second-block my-12">
 
 
-      <%= link_to offer_path(offer) do %>
+  <h2 class="my-6">Categories</h2>
 
+  <div class="flex flex-row w-full">
+    <div class="flex-grow">
 
-        <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>')">
-          <div class="card-img-bottom">
-            <h3><%= offer.artist_name %></h3>
-            <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
-          </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-full">
+        <div class="card-category">
+          <h3>
+            Hip hop
+          </h3>
         </div>
+        <div class="card-category">
+          <h3>
+            Pop
+          </h3>
+        </div>
+        <div class="card-category">
+          <h3>
+            Rock
+          </h3>
+        </div>
+        <div class="card-category">
+          <h3>
+            R&B
+          </h3>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="divider divider-vertical"></div>
+
+    <div class="grid flex-grow h-32 bg-base-300 rounded-box place-items-center">
+      <% 5.times do %>
+        <div class="card-top-five">
+          <img src="<%= cl_image_path @offers.first.photos.first.key, crop: :fill %>" alt="" class="avatar">
+          <h3>
+            <%= @offers.first.artist_name %>
+          </h3>
+        </div>
+      <% end  %>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="third-block my-12">
+
+
+  <h2 class="my-6" id="artists">Artists</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
+      <% @offers.each do |offer| %>
+
+
+        <%= link_to offer_path(offer) do %>
+
+
+          <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>')">
+            <div class="card-img-bottom">
+              <h3><%= offer.artist_name %></h3>
+              <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+            </div>
+          </div>
+
+
+        <% end %>
 
 
       <% end %>
+  </div>
 
 
-    <% end %>
 </div>
+
 
 
 <%# Old grid %>

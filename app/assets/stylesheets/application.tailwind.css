@@ -13,6 +13,10 @@
     @apply text-2xl font-bold;
   }
 
+  p {
+    @apply text-base;
+  }
+
   .card-category {
     height: 180px;
     width: 100%;

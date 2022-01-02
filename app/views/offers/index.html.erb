@@ -75,12 +75,32 @@
       Artists
     </h2>
 
-    <button class="btn bg-cyan-500 hover:bg-cyan-400">
-          New offer
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 ml-2 stroke-current">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-      </svg>
-    </button>
+
+    <label for="my-modal-2" class="btn bg-cyan-500 hover:bg-cyan-400 modal-button">New Offer</label>
+    <input type="checkbox" id="my-modal-2" class="modal-toggle">
+    <div class="modal">
+      <div class="modal-box">
+        <%= simple_form_for(@offer) do |f| %>
+
+
+          <div class="form-inputs">
+            <%= f.input :artist_name %>
+            <%= f.input :description %>
+            <%= f.input :price, as: :integer %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          </div>
+
+
+          <div class="modal-action">
+            <%= f.button :submit, class: "btn bg-cyan-500 hover:bg-cyan-400" %>
+            <label for="my-modal-2" class="btn">Close</label>
+          </div>
+
+
+        <% end %>
+      </div>
+    </div>
+
 
   </div>
 
@@ -136,34 +156,3 @@
       </div>
     <% end %>
   </div>
-
-  <%# FORM %>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Offer your artistry</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <%= simple_form_for(@offer) do |f| %>
-
-            <div class="form-inputs">
-              <%= f.input :artist_name %>
-              <%= f.input :description %>
-              <%= f.input :price, as: :integer %>
-              <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <%= f.button :submit, class: "btn btn-primary" %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>

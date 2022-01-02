@@ -23,6 +23,12 @@
     @apply bg-cyan-400 rounded-xl shadow-lg flex justify-center items-center;
   }
 
+  .card-top-five {
+    height: 25%;
+    width: 100%;
+    @apply bg-cyan-400 rounded-xl shadow-lg flex justify-center items-center;
+  }
+
   .card-artist {
     height: 300px;
     width: 100%;

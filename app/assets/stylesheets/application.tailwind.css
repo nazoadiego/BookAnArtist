@@ -17,6 +17,10 @@
     @apply text-base;
   }
 
+
+
+  /* FORMS */
+
   .form-inputs .form-group {
     @apply mt-2;
   }
@@ -39,6 +43,10 @@
     @apply mt-2 flex items-center;
   }
 
+
+
+  /* CARDS */
+
   .card-category {
     height: 180px;
     width: 100%;
@@ -56,6 +64,10 @@
     width: 100%;
     @apply rounded-xl shadow-lg flex justify-start items-end;
   }
+
+
+
+  /* BUTTONS */
 
   .btn {
     border: 0;

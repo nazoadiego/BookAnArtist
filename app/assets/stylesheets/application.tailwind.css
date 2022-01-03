@@ -17,6 +17,28 @@
     @apply text-base;
   }
 
+  .form-inputs .form-group {
+    @apply mt-2;
+  }
+
+  .form-inputs .form-control-file {
+    border: 0;
+    color: white;
+  }
+
+  .form-inputs input, textarea {
+    color: black;
+    @apply w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500;
+  }
+
+  .form-inputs .form-check-input {
+    @apply h-1 w-1 py-2 px-2 mr-2 text-cyan-400 rounded;
+  }
+
+  .form-inputs .form-check {
+    @apply mt-2 flex items-center;
+  }
+
   .card-category {
     height: 180px;
     width: 100%;
@@ -33,6 +55,10 @@
     height: 300px;
     width: 100%;
     @apply rounded-xl shadow-lg flex justify-start items-end;
+  }
+
+  .btn {
+    border: 0;
   }
 }
 

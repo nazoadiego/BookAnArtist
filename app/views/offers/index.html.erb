@@ -76,14 +76,14 @@
     </h2>
 
 
-    <label for="my-modal-2" class="btn bg-cyan-500 hover:bg-cyan-400 modal-button">New Offer</label>
+    <label for="my-modal-2" class="btn modal-button">New Offer</label>
     <input type="checkbox" id="my-modal-2" class="modal-toggle">
     <div class="modal">
       <div class="modal-box">
         <%= simple_form_for(@offer) do |f| %>
 
 
-          <div class="form-inputs">
+          <div class="form-inputs px-2">
             <%= f.input :artist_name %>
             <%= f.input :description %>
             <%= f.input :price, as: :integer %>
@@ -92,8 +92,8 @@
 
 
           <div class="modal-action">
-            <%= f.button :submit, class: "btn bg-cyan-500 hover:bg-cyan-400" %>
             <label for="my-modal-2" class="btn">Close</label>
+            <%= f.button :submit, class: "btn bg-cyan-500 hover:bg-cyan-400" %>
           </div>
 
 

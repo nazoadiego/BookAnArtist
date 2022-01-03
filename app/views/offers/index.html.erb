@@ -51,7 +51,7 @@
     </div>
     <div class="divider divider-vertical"></div>
 
-    <div class="flex-grow h-full bg-cyan-800 rounded-box place-items-center">
+    <div class="flex-grow h-full rounded-box place-items-center">
       <% 5.times do %>
         <div class="card-top-five">
           <img src="<%= cl_image_path @offers.first.photos.first.key, crop: :fill %>" alt="" class="avatar">

@@ -1,4 +1,4 @@
-<div class="sign-up justify-center mx-auto align-items-center rounded-xl shadow-xl p-8 bg-cyan-700" style="width: 380px; height: 432px"">
+<div class="sign-up justify-center mx-auto align-items-center rounded-xl shadow-xl p-8 bg-cyan-700" style="width: 380px; height: 462px"">
   <h2 class="mb-6 mt-2 text-center">Sign up</h2>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -18,7 +18,7 @@
     </div>
 
     <div class="form-actions text-center m-4">
-      <%= f.button :submit, "Sign up", class:'btn bg-cyan-500 hover:bg-cyan-400' %>
+      <%= f.button :submit, "Sign up", class:'btn bg-cyan-500 hover:bg-cyan-400 mb-4' %>
     </div>
   <% end %>
 

@@ -20,8 +20,8 @@
               <div class="form-inputs px-2">
 
               <div class="form-inputs">
-                <%= f.input :start_time, :as => :datetime %>
-                <%= f.input :end_time, :as => :datetime %>
+                <%= f.input :start_time, :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
+                <%= f.input :end_time, :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
                 <%= f.input :message, :as => :text %>
               </div>
               <%= @total %>

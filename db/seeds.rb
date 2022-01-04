@@ -29,14 +29,15 @@ end
 puts 'Users created'
 
 offer1 = Offer.create(
-  artist_name: 'Andrea Boccelli',
-  description: 'The Coolest Italian there will ever be. I am sorry Filippo. #SorryNotSorry',
-  price: 6_500,
-  user: User.last
+  artist_name: 'Kanye West',
+  description: 'You know you can\'t Rome without Caesar. Or without Yeezy...',
+  price: 80_500,
+  user: User.first
 )
+
 offer1.photos.attach(
-  io: File.open(Rails.root.join('app/assets/images/seed/andrea.jpeg')),
-  filename: 'andrea.jpeg',
+  io: File.open(Rails.root.join('app/assets/images/seed/kw.jpeg')),
+  filename: 'kw.jpeg',
   content_type: 'image/jpeg'
 )
 
@@ -210,15 +211,14 @@ offer14.photos.attach(
 )
 
 offer15 = Offer.create(
-  artist_name: 'Kanye West',
-  description: 'You know you can\'t Rome without Caesar. Or without Yeezy...',
-  price: 80_500,
-  user: User.first
+  artist_name: 'Andrea Boccelli',
+  description: 'The Coolest Italian there will ever be. I am sorry Filippo. #SorryNotSorry',
+  price: 6_500,
+  user: User.last
 )
-
 offer15.photos.attach(
-  io: File.open(Rails.root.join('app/assets/images/seed/kw.jpeg')),
-  filename: 'kw.jpeg',
+  io: File.open(Rails.root.join('app/assets/images/seed/andrea.jpeg')),
+  filename: 'andrea.jpeg',
   content_type: 'image/jpeg'
 )
 

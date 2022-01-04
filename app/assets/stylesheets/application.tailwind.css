@@ -13,6 +13,10 @@
     @apply text-2xl font-bold;
   }
 
+  h4 {
+    @apply text-xl font-bold;
+  }
+
   p {
     @apply text-base;
   }
@@ -32,7 +36,11 @@
 
   .form-inputs input, textarea {
     color: black;
-    @apply w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500;
+    @apply mt-2 w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500;
+  }
+
+  .form-select {
+    @apply text-black border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500;
   }
 
   .form-inputs .form-check-input {
@@ -43,6 +51,9 @@
     @apply mt-2 flex items-center;
   }
 
+  .file-button {
+    @apply text-sm leading-6 file:mr-2 file:px-4 file:py-2 file:rounded-full file:bg-cyan-200 file:text-cyan-700 file:font-semibold file:border-none hover:file:bg-cyan-100;
+  }
 
 
   /* CARDS */
@@ -54,9 +65,9 @@
   }
 
   .card-top-five {
-    height: 25%;
-    width: 100%;
-    @apply bg-oceanblack-600 rounded-xl shadow-lg flex justify-center items-center;
+    height: 100%;
+    background-color: #2A2E37;
+    @apply rounded-xl shadow-lg flex justify-center items-center flex-col;
   }
 
   .card-artist {
@@ -72,6 +83,7 @@
   .btn {
     border: 0;
   }
+
 }
 
 @tailwind components;

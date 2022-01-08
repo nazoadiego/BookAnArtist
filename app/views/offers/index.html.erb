@@ -119,12 +119,19 @@
         <%= link_to offer_path(offer) do %>
 
 
-          <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>')">
-            <span class="px-4 pb-4" style="display: block">
-              <h3><%= offer.artist_name %></h3>
-              <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
-            </span>
+          <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>');">
+
+            <div class="w-full h-full flex items-end rounded-xl" style="background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);">
+
+              <span class="px-4 pb-4" style="display: block;">
+                <h3><%= offer.artist_name %></h3>
+                <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+              </span>
+
+            </div>
+
           </div>
+
 
 
         <% end %>

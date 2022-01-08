@@ -85,5 +85,15 @@
 
 }
 
+
 @tailwind components;
+
+@layer components {
+  @media (min-width:640px) {
+    .modal-box {
+      max-width: 35rem;
+    }
+  }
+}
+
 @tailwind utilities;

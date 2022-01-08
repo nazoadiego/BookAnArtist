@@ -120,8 +120,10 @@
 
 
           <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>')">
-            <h3><%= offer.artist_name %></h3>
-            <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+            <span class="px-4 pb-4" style="display: block">
+              <h3><%= offer.artist_name %></h3>
+              <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+            </span>
           </div>
 
 

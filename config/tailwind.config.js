@@ -30,6 +30,6 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
-    require('daisyui.d.ts')
+    require('daisyui')
   ],
 }

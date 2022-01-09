@@ -1,5 +1,5 @@
 {
-  "name": "BookAnArtist",
+  "name": "bookanartist",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",

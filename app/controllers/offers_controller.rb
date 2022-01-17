@@ -6,6 +6,7 @@ class OffersController < ApplicationController
       @offers = Offer.all
     end
     @offer = Offer.new
+    @top_artists = Offer.first(5)
   end
 
   def show

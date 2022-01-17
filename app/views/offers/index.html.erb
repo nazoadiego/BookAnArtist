@@ -55,17 +55,29 @@
 
 <div class="third-block my-8">
 
-  <h2 class="my-6">Top Artists</h2>
 
-      <div class="grid grid-cols-5">
-        <% 5.times do %>
+      <div class="grid grid-cols-10">
+        <article class="col-start-1 col-end-3">
+            <h2 class="my-6">Top Artists</h2>
+            <p>Check out the most popular artists of the moment!</p>
+        </article>
+
+
+        <% @top_artists.each do |artist| %>
+
+
           <div class="card-top-five">
-            <img src="<%= cl_image_path @offers.first.photos.first.key, crop: :fill %>" alt="" class="avatar">
+            <img src="<%= cl_image_path artist.photos.first.key, crop: :fill %>" alt="" class="avatar">
             <h4 class="font-semibold">
-              <%= @offers.first.artist_name %>
+              <%= artist.artist_name %>
             </h4>
           </div>
+
+
         <% end  %>
+
+
+
       </div>
 
 

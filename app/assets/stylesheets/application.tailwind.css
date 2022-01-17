@@ -65,8 +65,7 @@
   }
 
   .card-top-five {
-    height: 100%;
-    @apply flex justify-center items-center flex-col;
+    @apply inline-flex justify-center items-center flex-col;
   }
 
   .card-artist {

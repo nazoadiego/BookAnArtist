@@ -89,7 +89,7 @@
 
 @layer components {
   @media (min-width:640px) {
-    .modal-box {
+    .modal-box.booking {
       max-width: 37rem;
     }
   }

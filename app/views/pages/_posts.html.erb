@@ -7,8 +7,8 @@
 
 
 
-    <div class="post-card flex">
-      <div class="date-circle">
+    <div class="post-card flex mt-4">
+      <div class="date-circle mr-6">
         <div class="post-card-date-primary">
           <span class="post-card-date-day">
             <%= booking.start_time.day %>
@@ -44,9 +44,9 @@
             </div>
           <% else %>
             <% if booking.status == "accepted" %>
-              Status:<div style="color:green"> Accepted</div>
+              <h5>Status: <span style="color:green">Accepted</span></h5>
             <% elsif booking.status == "rejected" %>
-              Status:<div style="color:red"> Rejected</div>
+              <h5>Status: <span style="color:red">Rejected</span></h5>
             <% end %>
           <% end %>
 

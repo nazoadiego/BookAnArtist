@@ -29,7 +29,6 @@ import { statusOnLoadYellow, statusOnLoadGreen } from '../components/status';
 // import { initSelect2 } from '../components/init_select2';
 
 window.onload = function () {
-  console.log("dejndek")
   statusOnLoadYellow();
   statusOnLoadGreen();
 };

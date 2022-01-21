@@ -17,8 +17,8 @@
           <th></th>
           <td><%= booking.offer.artist_name %></td>
           <td><%= booking.status %></td>
-          <td><%= booking.start_time %></td>
-          <td><%= booking.end_time %></td>
+          <td><%= booking.start_time.to_time.strftime('%B %e %l:%M %p') %></td>
+          <td><%= booking.end_time.to_time.strftime('%B %e %l:%M %p') %></td>
           <td><%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></td>
         </tr>
       <% end %>

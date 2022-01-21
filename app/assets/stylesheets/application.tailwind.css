@@ -90,7 +90,7 @@
 @layer components {
   @media (min-width:640px) {
     .modal-box {
-      max-width: 35rem;
+      max-width: 37rem;
     }
   }
 }

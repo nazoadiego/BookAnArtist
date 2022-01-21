@@ -1,17 +1,17 @@
-<div class="full-height">
-  <div class="row">
-    <div class="yellow-background col-5 full-height d-flex flex-column align-items-center justify-content-center">
-      <h1 class="roboto-mono"> <%= @offer.artist_name.upcase %></h1>
-      <h1 class=" roboto-mono">BOOKING</h1>
-    </div>
-    <div class="black-background col-7 full-height d-flex flex-column align-items-center justify-content-center">
-      <h3 class="yellow-text">Message:</h3>
-      <p class="white-text center-text"><%= @booking.message %></p>
-      <h3 class="yellow-text">Date:</h3>
-      <p class="white-text">Start Time: <%= @booking.start_time %></p>
-      <p class="white-text">End Time: <%= @booking.end_time %></p>
-      <h3 class="yellow-text">Total Price:</h3>
+<div class="h-screen flex justify-center items-center">
+
+<div class="bg-sky-700 rounded-2xl shadow-xl">
+      <h1> <%= @offer.artist_name.upcase %></h1>
+      <h3>Message:</h3>
+      <p><%= @booking.message %></p>
+      <h3>Date:</h3>
+      <p>Start Time: <%= @booking.start_time.to_time.strftime('%B %e at %l:%M %p') %></p>
+      <p>End Time: <%= @booking.end_time.to_time.strftime('%B %e at %l:%M %p') %></p>
+      <h3>Total Price:</h3>
       <h4>€<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
+</div>
+</div>
+
       <h2 class="yellow-text">Status:</h2>
       <% if @booking.status == "accepted" %>
         <div class="green-neon-button" id="status-btn">
@@ -44,6 +44,3 @@
           </a>
         </div>
       <% end %>
-    </div>
-  </div>
-</div>

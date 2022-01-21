@@ -1,5 +1,5 @@
 
-<div class="overflow-x-auto">
+<div class="overflow-x-auto hidden sm:block">
   <table class="table w-full">
     <thead>
       <tr>
@@ -24,6 +24,16 @@
       <% end %>
     </tbody>
   </table>
+</div>
+
+<div class="sm:hidden">
+  <% @profile_user.user_bookings.each do |booking| %>
+    <h2>Artist: <%= booking.offer.artist_name %></h2>
+    <h4>Status: <%= booking.status %></h4>
+    <h4>Start Time: <%= booking.start_time.to_time.strftime('%B %e %l:%M %p') %></h4>
+    <h4>End Time: <%= booking.end_time.to_time.strftime('%B %e %l:%M %p') %></h4>
+    <h4>Total Price: <%= number_with_precision(booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
+  <% end %>
 </div>
 
 <%# old table %>

@@ -1,7 +1,14 @@
 <h2 class="mt-4">Welcome <%= @profile_user.email %>!</h2>
 
-<div class="grid grid-cols-2 mt-">
+<div class="grid">
 
+  <div class="dashboard-bookings">
+
+
+    <h2>Booking Requests</h2>
+    <%= render 'pages/bookings' %>
+
+  </div>
 
   <div class="dashboard-offers">
 
@@ -9,15 +16,6 @@
   <h2>My Offers</h2>
   <%= render 'pages/posts' %>
 
-
-  </div>
-
-
-  <div class="dashboard-bookings">
-
-
-    <h2>Booking Requests</h2>
-    <%= render 'pages/bookings' %>
 
   </div>
 

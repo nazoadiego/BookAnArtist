@@ -1,48 +1,63 @@
-<div class="dash1 ml-4" style="height:95%">
-  <div class="row">
-    <% @offerscreated.each do |offer| %>
-      <div class="col-lg-4" style="height:90%">
+<% @offerscreated.each do |offer| %>
         <h3><%= offer.artist_name %>, €<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %>/hr</h3>
         <h5 class="my-3">Requests for <%= offer.artist_name %></h5>
-        <% offer.bookings.each do |booking| %>
-          <div class="card card-margin">
-            <div class="card-body pt-2">
-                <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                        <div class="widget-49-date-primary">
-                            <span class="widget-49-date-day"><%= booking.start_time.day %></span>
-                            <span class="widget-49-date-month"><%= Date::ABBR_MONTHNAMES[(booking.start_time.month)] %></span>
-                        </div>
-                        <div class="widget-49-meeting-info">
-                            <span class="widget-49-pro-title"><%= booking.user.first_name %></span>
-                            <span class="widget-49-meeting-time"><%= booking.start_time.hour %>.00 to <%= booking.end_time.hour %>.00 Hrs</span>
-                            <span class="widget-49-pro-title">
-                              <% if booking.status == 'pending' %>
-                                <div class="btn">
-                                  <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id, status: "accepted" %>
-                                </div>
-                                <div class="btn">
-                                  <%= button_to "Reject", controller: "pages", action: "accept", id: booking.id, status: "rejected" %>
-                                </div>
-                              <% else %>
-                                <% if booking.status == "accepted" %>
-                                  Status:<div style="color:green"> Accepted</div>
-                                <% elsif booking.status == "rejected" %>
-                                  Status:<div style="color:red"> Rejected</div>
-                                <% end %>
-                              <% end %>
-                          </span>
-                        </div>
-                    </div>
-                    <div class="widget-49-meeting-action">
-                        <a href='/bookings/<%= booking.id %>' class="btn btn-sm btn-flash-border-primary">View All</a>
-                    </div>
-                </div>
-            </div>
-          </div>
-        <% end %>
 
+
+  <% offer.bookings.each do |booking| %>
+
+
+
+    <div class="post-card flex">
+      <div class="date-circle">
+        <div class="post-card-date-primary">
+          <span class="post-card-date-day">
+            <%= booking.start_time.day %>
+          </span>
+
+          <span class="post-card-date-month">
+            <%= Date::ABBR_MONTHNAMES[(booking.start_time.month)] %>
+          </span>
+        </div>
       </div>
-    <% end %>
-  </div>
-</div>
+
+        <div class="flex flex-col">
+
+          <div class="flex">
+
+            <%= booking.user.first_name %>
+            <%= booking.start_time.hour %>:00-<%= booking.end_time.hour %>:00
+
+            <div class="post-card-meeting-action">
+                <a href='/bookings/<%= booking.id %>' class="btn btn-sm btn-flash-border-primary">Details</a>
+            </div>
+
+          </div>
+
+          <div class="flex">
+
+          <% if booking.status == 'pending' %>
+            <div class="btn bg-cyan-500 hover:bg-cyan-400">
+              <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id, status: "accepted", class: "btn" %>
+            </div>
+            <div class="btn">
+              <%= button_to "Reject", controller: "pages", action: "accept", id: booking.id, status: "rejected", class: "btn" %>
+            </div>
+          <% else %>
+            <% if booking.status == "accepted" %>
+              Status:<div style="color:green"> Accepted</div>
+            <% elsif booking.status == "rejected" %>
+              Status:<div style="color:red"> Rejected</div>
+            <% end %>
+          <% end %>
+
+          </div>
+
+        </div>
+
+
+    </div>
+
+
+  <% end %>
+
+<% end %>

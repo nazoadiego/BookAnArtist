@@ -32,17 +32,31 @@
     <%= form_tag offers_path, method: :get, class: 'search-form' do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control rounded-xl mr-2",
+        class: "form-control rounded-xl mr-2 hidden lg:block",
         style: "color: black",
         placeholder: "Find an artist"
       %>
-      <%= submit_tag "Search", class: "mr-2 py-3 px-6 rounded-xl btn bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-400" %>
+      <%= submit_tag "Search", class: "mr-2 py-3 px-6 rounded-xl btn bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-400  hidden lg:block" %>
     <% end %>
 
     <%= link_to destroy_user_session_path, method: :delete do %>
-      <button class="btn">
+      <button class="btn hidden lg:block">
         <i class="fas fa-sign-out-alt"></i>
       </button>
     <% end %>
+
+    <div class="dropdown dropdown-end lg:hidden">
+      <label tabindex="0" class="m-1 btn">
+        <i class="fas fa-ellipsis-v"></i>
+      </label>
+      <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
+        <li><a>Item 1</a></li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            Sign out
+          <% end %>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

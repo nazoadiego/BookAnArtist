@@ -1,7 +1,7 @@
-<div class="">
+<div class="min-h-screen flex items-center">
 
 
-<div class="grid grid-cols-2 h-1/2">
+<div class="grid grid-cols-1 lg:grid-cols-2 h-1/2">
 
   <div class="artist-show-images">
     <% @offer.photos.each do |photo| %>
@@ -9,65 +9,59 @@
     <% end %>
   </div>
 
-  <div class="artist-info ml-8 mt-2">
-
-
-        <a href="<%= offers_path %>">
-          <div class="btn ml-5">
-            Go back
-          </div>
-        </a>
+  <div class="artist-info">
 
 
 
-
-<div>
+      <div class="flex justify-between py-4 px-8">
         <h1 class="roboto-mono"><%= @offer.artist_name %></h1>
-        <label for="my-modal-2" class="btn bg-cyan-500 hover:bg-cyan-400 modal-button">Book now</label>
-        <input type="checkbox" id="my-modal-2" class="modal-toggle">
-        <div class="modal">
-          <div class="modal-box booking">
-            <%= simple_form_for [@offer, @booking] do |f| %>
+        <%= render 'bookings/new_booking_form' %>
+      </div>
 
+      <div class="py-4 px-8">
 
-              <div class="form-inputs px-2">
-
-              <div class="form-inputs">
-                <%= f.input :start_time, :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
-                <%= f.input :end_time, :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
-                <%= f.input :message, :as => :text %>
-              </div>
-              <div class="modal-footer">
-
-              </div>
-              </div>
-
-
-              <div class="modal-action">
-                <label for="my-modal-2" class="btn">Close</label>
-                <%= f.button :submit, class: "btn bg-cyan-500 hover:bg-cyan-400", value:"Request Booking" %>
-              </div>
-
-
-            <% end %>
+          <div class="mb-8">
+              <p><%= @offer.description %></p>
           </div>
-        </div>
-</div>
 
+          <div>
+            <div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box collapse-arrow">
+              <div class="collapse-title text-xl font-medium">
+                Are there any extra services?
+              </div>
+              <div class="collapse-content">
+                <p>
+                It's not unusual for artists to take song requests or do vip meetings.
+                Leave a message when making your booking and the artist's manager
+                will get back to you
+                </p>
+              </div>
+            </div>
+            <div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box collapse-arrow">
+              <div class="collapse-title text-xl font-medium">
+                What if my timings change after I've made a booking?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  Be sure to leave a notice for the artist within a reasonable time.
+                </p>
 
-        <p><%= @offer.description %></p>
-        <div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box collapse-arrow">
-          <div class="collapse-title text-xl font-medium">
-            Focus me to see content
+              </div>
+            </div>
+            <div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box collapse-arrow">
+              <div class="collapse-title text-xl font-medium">
+                Can I cancel once the booking has been confirmed?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  Get in touch with our BookAnArtist team! We will make sure to
+                  reimburse you no questions asked, if it is within a reasonable timeframe
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="collapse-content">
-            <p>tabindex="0" attribute is necessary to make the div focusable</p>
-          </div>
-        </div>
 
-
-  </div>
-
+      </div>
 
 </div>
 

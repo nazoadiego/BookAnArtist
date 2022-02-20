@@ -28,12 +28,12 @@
             <%= booking.start_time.hour %>:00-<%= booking.end_time.hour %>:00
 
             <div class="post-card-meeting-action">
-                <a href='/bookings/<%= booking.id %>' class="btn btn-sm btn-flash-border-primary">Details</a>
+                <a href='/bookings/<%= booking.id %>' class="btn btn-sm btn-flash-border-primary ml-2">Details</a>
             </div>
 
           </div>
 
-          <div class="flex">
+          <div class="flex mt-2">
 
           <% if booking.status == 'pending' %>
             <div class="btn bg-cyan-500 hover:bg-cyan-400">

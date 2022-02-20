@@ -28,7 +28,7 @@
 
 <div class="sm:hidden">
   <% @profile_user.user_bookings.each do |booking| %>
-    <h2>Artist: <%= booking.offer.artist_name %></h2>
+    <h2 class="mt-8">Artist: <%= booking.offer.artist_name %></h2>
     <h4>Status: <%= booking.status %></h4>
     <h4>Start Time: <%= booking.start_time.to_time.strftime('%B %e %l:%M %p') %></h4>
     <h4>End Time: <%= booking.end_time.to_time.strftime('%B %e %l:%M %p') %></h4>

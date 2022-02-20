@@ -5,13 +5,24 @@
 
   <div class="artist-show-images">
     <% @offer.photos.each do |photo| %>
-      <img class="banner" src="<%= cl_image_path photo.key, height: 800, width: 1000, crop: :fill %>">
+      <img class="banner rounded-lg" src="<%= cl_image_path photo.key, height: 800, width: 1000, crop: :fill %>">
     <% end %>
   </div>
 
   <div class="artist-info ml-8 mt-2">
 
 
+        <a href="<%= offers_path %>">
+          <div class="btn ml-5">
+            Go back
+          </div>
+        </a>
+
+
+
+
+<div>
+        <h1 class="roboto-mono"><%= @offer.artist_name %></h1>
         <label for="my-modal-2" class="btn bg-cyan-500 hover:bg-cyan-400 modal-button">Book now</label>
         <input type="checkbox" id="my-modal-2" class="modal-toggle">
         <div class="modal">
@@ -41,17 +52,18 @@
             <% end %>
           </div>
         </div>
+</div>
 
 
-        <a href="<%= offers_path %>">
-          <div class="btn ml-5">
-            Go back
-          </div>
-        </a>
-
-
-        <h1 class="roboto-mono"><%= @offer.artist_name %></h1>
         <p><%= @offer.description %></p>
+        <div tabindex="0" class="collapse border border-base-300 bg-base-100 rounded-box collapse-arrow">
+          <div class="collapse-title text-xl font-medium">
+            Focus me to see content
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
 
 
   </div>

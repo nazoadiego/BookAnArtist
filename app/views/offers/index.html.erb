@@ -9,7 +9,7 @@
 
     <div>
       <p class=" mt-2 lg:mt-0">Your favorite artists are returning to
-      the stages! Don't miss the chance to see Kanye, Jay-Z, and
+      the stages! Don"t miss the chance to see Kanye, Jay-Z, and
       Drake live. Make a booking to see these stars from around
       the world with just one click.</p>
       <a href="#artists">
@@ -44,49 +44,14 @@
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
 
-
-
-
-        <div class="card-artist"
-          style="background-image: url('<%= image_path 'pop-rina',
-          crop: :fill %>');">
-          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
-            <span class="px-4 pb-4 block">
-              <h3>Pop</h3>
-            </span>
-          </div>
-        </div>
-
-        <div class="card-artist"
-          style="background-image: url('<%= image_path 'rock-vincent',
-          crop: :fill %>');">
-          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
-            <span class="px-4 pb-4 block">
-              <h3>Rock</h3>
-            </span>
-          </div>
-        </div>
-
-        <div class="card-artist"
-          style="background-image: url('<%= image_path 'rap-kendrick',
-          crop: :fill %>');">
-          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
-            <span class="px-4 pb-4 block">
-              <h3>Hip hop</h3>
-            </span>
-          </div>
-        </div>
-
-        <div class="card-artist"
-          style="background-image: url('<%= image_path 'rb-tyler',
-          crop: :fill %>');">
-          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
-            <span class="px-4 pb-4 block">
-              <h3>R&B</h3>
-            </span>
-          </div>
-        </div>
-
+        <%= render "shared/category_card",
+          asset_image: "pop-rina", genre: "Pop"%>
+        <%= render "shared/category_card",
+          asset_image: "rock-vincent", genre: "Rock"%>
+        <%= render "shared/category_card",
+          asset_image: "rap-kendrick", genre: "Hip Hop"%>
+        <%= render "shared/category_card",
+          asset_image: "rb-tyler", genre: "R&B"%>
 
       </div>
 
@@ -186,13 +151,13 @@
 
           <div class="card-artist"
             style="background-image: url('<%= cl_image_path offer.photos.first.key,
-            crop: :fill %>');">
+            crop: :fill %>')">
 
             <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
 
               <span class="px-4 pb-4 block">
                 <h3><%= offer.artist_name %></h3>
-                <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
+                <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => ".") %></p>
               </span>
 
             </div>

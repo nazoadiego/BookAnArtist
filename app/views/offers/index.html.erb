@@ -1,22 +1,40 @@
 <div class="first-block my-12">
 
   <div class="grid grid-grid-cols-1 lg:grid-cols-2">
-    <h2>The opportunity to <span class="underline decoration-cyan-400">connect</span> with your favorite artists</h2>
+    <h2>
+      The opportunity to
+        <span class="underline decoration-cyan-400">connect</span>
+      with your favorite artists
+    </h2>
 
     <div>
-      <p class=" mt-2 lg:mt-0">Your favorite artists are returning to the stages! Don't miss the chance to see Kanye, Jay-Z, and Drake live. Make a booking to see these stars from around the world with just one click.</p>
+      <p class=" mt-2 lg:mt-0">Your favorite artists are returning to
+      the stages! Don't miss the chance to see Kanye, Jay-Z, and
+      Drake live. Make a booking to see these stars from around
+      the world with just one click.</p>
       <a href="#artists">
         <button class="btn bg-cyan-500 hover:bg-cyan-400 mt-4 self-end">
               Browse Artists
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 ml-2 stroke-current">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24"
+            class="inline-block w-6 h-6 ml-2 stroke-current"
+          >
+            <path stroke-linecap="round"
+            stroke-linejoin="round" s
+            troke-width="2" d="M9 5l7 7-7 7">
+            </path>
           </svg>
         </button>
       </a>
     </div>
+
+
   </div>
 
-  <img src="https://g.foolcdn.com/editorial/images/560639/concert-stage-lights.jpg" alt="" class="mt-8 rounded-2xl  h-96 w-full object-cover object-bottom shadow-lg">
+  <img src="https://g.foolcdn.com/editorial/images/560639/concert-stage-lights.jpg"
+    alt="" class="mt-8 rounded-2xl h-96 w-full object-cover
+    object-bottom shadow-lg"
+  >
 
 </div>
 
@@ -69,7 +87,10 @@
           <% @top_artists.each do |artist| %>
             <div class="card-top-five mx-4">
 
-                <img src="<%= cl_image_path artist.photos.first.key, crop: :fill %>" alt="" class="avatar">
+                <img src="<%= cl_image_path artist.photos.first.key, crop: :fill %>"
+                  alt="<%= artist.artist_name %>"
+                  class="avatar"
+                >
                 <h4 class="font-semibold">
                   <%= artist.artist_name %>
                 </h4>
@@ -100,8 +121,12 @@
     </h2>
 
 
-    <label for="my-modal-2" class="btn bg-cyan-500 hover:bg-cyan-400 modal-button">New Offer</label>
+    <label for="my-modal-2"
+      class="btn bg-cyan-500 hover:bg-cyan-400 modal-button">
+        New Offer
+    </label>
     <input type="checkbox" id="my-modal-2" class="modal-toggle">
+
     <div class="modal">
       <div class="modal-box">
         <%= simple_form_for(@offer) do |f| %>
@@ -111,7 +136,8 @@
             <%= f.input :artist_name %>
             <%= f.input :description %>
             <%= f.input :price, as: :integer %>
-            <%= f.input :photos, as: :file, input_html: { multiple: true,  class: "file-button" } %>
+            <%= f.input :photos, as: :file,
+            input_html: { multiple: true,  class: "file-button" } %>
           </div>
 
 
@@ -136,11 +162,13 @@
         <%= link_to offer_path(offer) do %>
 
 
-          <div class="card-artist" style="background-image: url('<%= cl_image_path offer.photos.first.key, crop: :fill %>');">
+          <div class="card-artist"
+            style="background-image: url('<%= cl_image_path offer.photos.first.key,
+            crop: :fill %>');">
 
-            <div class="w-full h-full flex items-end rounded-xl" style="background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);">
+            <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
 
-              <span class="px-4 pb-4" style="display: block;">
+              <span class="px-4 pb-4 block">
                 <h3><%= offer.artist_name %></h3>
                 <p>€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
               </span>
@@ -158,31 +186,3 @@
 
 
 </div>
-
-
-
-<%# Old grid %>
-
-<div class="hidden head-index row justify-content-between align-items-center mx-3 mt-5">
-  <h1 class="text-left">Artists to Book</h1>
-  <div class="text-right">
-    <button type="button" class="btn btn-ghost-post" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create a Post</button>
-  </div>
-
-  <div class="grid my-3" >
-    <% @offers.each do |offer| %>
-      <div>
-        <div class="card">
-            <p id="price" class="card-title">€<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %></p>
-            <h2 class="card-title" ><%= link_to offer.artist_name, offer_path(offer) %></h2>
-          <a href="<%=offer_path(offer) %>">
-            <% if offer.photos.first == nil %>
-              <img src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1769&q=80" alt="Card image cap">
-            <% else %>
-              <img src="<%= cl_image_path offer.photos.first.key, crop: :fill  %>" alt="Card image cap">
-            <% end %>
-          </a>
-        </div>
-      </div>
-    <% end %>
-  </div>

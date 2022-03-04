@@ -1,5 +1,9 @@
-<label for="my-modal-2" class="btn bg-cyan-500 hover:bg-cyan-400 modal-button mr-8">Book now</label>
+<label for="my-modal-2"
+class="btn bg-cyan-500 hover:bg-cyan-400 modal-button mr-8">
+  Book now
+</label>
 <input type="checkbox" id="my-modal-2" class="modal-toggle">
+
 <div class="modal">
   <div class="modal-box booking">
     <%= simple_form_for [@offer, @booking] do |f| %>
@@ -7,20 +11,26 @@
 
       <div class="form-inputs px-2">
 
-      <div class="form-inputs">
-        <%= f.input :start_time, :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
-        <%= f.input :end_time, :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
-        <%= f.input :message, :as => :text %>
-      </div>
-      <div class="modal-footer">
+        <div class="form-inputs">
+          <%= f.input :start_time,
+            :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
+          <%= f.input :end_time,
+            :as => :datetime, input_html: { class: "form-select flex inline-flex" } %>
+          <%= f.input :message,
+            :as => :text %>
+        </div>
 
-      </div>
       </div>
 
 
       <div class="modal-action">
-        <label for="my-modal-2" class="btn">Close</label>
-        <%= f.button :submit, class: "btn bg-cyan-500 hover:bg-cyan-400", value:"Request Booking" %>
+        <label for="my-modal-2" class="btn">
+          Close
+        </label>
+
+        <%= f.button :submit,
+          class: "btn bg-cyan-500 hover:bg-cyan-400",
+          value:"Request Booking" %>
       </div>
 
 

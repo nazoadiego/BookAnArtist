@@ -1,10 +1,15 @@
 <% @offerscreated.each do |offer| %>
-        <h3><%= offer.artist_name %>, €<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %>/hr</h3>
-        <h5 class="my-3">Requests for <%= offer.artist_name %></h5>
+        <h3>
+          <%= offer.artist_name %>,
+          €<%= number_with_precision(offer.price, :precision => 0, :delimiter => '.') %>
+            /hr
+        </h3>
+        <h5 class="my-3">
+          Requests for <%= offer.artist_name %>
+        </h5>
 
 
   <% offer.bookings.each do |booking| %>
-
 
 
     <div class="post-card flex mt-4">
@@ -28,27 +33,36 @@
             <%= booking.start_time.hour %>:00-<%= booking.end_time.hour %>:00
 
             <div class="post-card-meeting-action">
-                <a href='/bookings/<%= booking.id %>' class="btn btn-sm btn-flash-border-primary ml-2">Details</a>
+                <a href='/bookings/<%= booking.id %>'
+                  class="btn btn-sm btn-flash-border-primary ml-2">
+                  Details
+                </a>
             </div>
 
           </div>
 
           <div class="flex mt-2">
 
-          <% if booking.status == 'pending' %>
-            <div class="btn bg-cyan-500 hover:bg-cyan-400">
-              <%= button_to "Accept", controller: "pages", action: "accept", id: booking.id, status: "accepted", class: "btn" %>
-            </div>
-            <div class="btn">
-              <%= button_to "Reject", controller: "pages", action: "accept", id: booking.id, status: "rejected", class: "btn" %>
-            </div>
-          <% else %>
-            <% if booking.status == "accepted" %>
-              <h5>Status: <span style="color:green">Accepted</span></h5>
-            <% elsif booking.status == "rejected" %>
-              <h5>Status: <span style="color:red">Rejected</span></h5>
+            <% if booking.status == 'pending' %>
+              <div class="btn bg-cyan-500 hover:bg-cyan-400">
+                <%= button_to "Accept", controller: "pages", action: "accept",
+                id: booking.id, status: "accepted", class: "btn" %>
+              </div>
+              <div class="btn">
+                <%= button_to "Reject", controller: "pages", action: "accept",
+                 id: booking.id, status: "rejected", class: "btn" %>
+              </div>
+            <% else %>
+              <% if booking.status == "accepted" %>
+                  <h5>
+                    Status: <span style="color:green">Accepted</span>
+                  </h5>
+              <% elsif booking.status == "rejected" %>
+                  <h5>
+                    Status: <span style="color:red">Rejected</span>
+                  </h5>
+              <% end %>
             <% end %>
-          <% end %>
 
           </div>
 

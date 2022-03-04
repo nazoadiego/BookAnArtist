@@ -31,13 +31,10 @@
 
   </div>
 
-  <img src="https://g.foolcdn.com/editorial/images/560639/concert-stage-lights.jpg"
-    alt="" class="mt-8 rounded-2xl h-96 w-full object-cover
-    object-bottom shadow-lg"
-  >
-
+  <%# Add the alt! %>
+  <%= image_tag "concert-stage-lights.jpg", alt: "Concert with bright blue lights",
+    class: "mt-8 rounded-2xl h-96 w-full object-cover object-bottom shadow-lg" %>
 </div>
-
 
 <div class="second-block my-8">
 
@@ -46,26 +43,51 @@
 
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full">
-        <div class="card-category">
-          <h3>
-            Hip hop
-          </h3>
+
+
+
+
+        <div class="card-artist"
+          style="background-image: url('<%= image_path 'pop-rina',
+          crop: :fill %>');">
+          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
+            <span class="px-4 pb-4 block">
+              <h3>Pop</h3>
+            </span>
+          </div>
         </div>
-        <div class="card-category">
-          <h3>
-            Pop
-          </h3>
+
+        <div class="card-artist"
+          style="background-image: url('<%= image_path 'rock-vincent',
+          crop: :fill %>');">
+          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
+            <span class="px-4 pb-4 block">
+              <h3>Rock</h3>
+            </span>
+          </div>
         </div>
-        <div class="card-category">
-          <h3>
-            Rock
-          </h3>
+
+        <div class="card-artist"
+          style="background-image: url('<%= image_path 'rap-kendrick',
+          crop: :fill %>');">
+          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
+            <span class="px-4 pb-4 block">
+              <h3>Hip hop</h3>
+            </span>
+          </div>
         </div>
-        <div class="card-category">
-          <h3>
-            R&B
-          </h3>
+
+        <div class="card-artist"
+          style="background-image: url('<%= image_path 'rb-tyler',
+          crop: :fill %>');">
+          <div class="w-full h-full flex items-end rounded-xl card-img-gradient">
+            <span class="px-4 pb-4 block">
+              <h3>R&B</h3>
+            </span>
+          </div>
         </div>
+
+
       </div>
 
 

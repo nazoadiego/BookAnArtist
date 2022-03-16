@@ -1,4 +1,4 @@
-<div class="login justify-center mx-auto align-items-center rounded-xl shadow-xl p-8 bg-cyan-700" style="width: 380px; height: 432px">
+<div class="login justify-center mt-16 mx-auto align-items-center rounded-xl shadow-xl p-8 bg-cyan-700" style="width: 380px; height: 474px">
   <h2 class="mb-6 mt-2 text-center">Log in</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -6,10 +6,12 @@
       <%= f.input :email,
                   required: false,
                   autofocus: true,
-                  input_html: { autocomplete: "email" } %>
+                  placeholder: "Email",
+                  input_html: { autocomplete: "email", value: "Guest@app.com" } %>
       <%= f.input :password,
                   required: false,
-                  input_html: { autocomplete: "current-password" } %>
+                  placeholder: "Password",
+                  input_html: { autocomplete: "current-password", value: "123123" } %>
       <%= f.input :remember_me,  class:'ring-offset-0', as: :boolean if devise_mapping.rememberable? %>
     </div>
 

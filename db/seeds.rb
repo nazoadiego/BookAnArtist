@@ -26,6 +26,16 @@ User.destroy_all
   new_user.save!
 end
 
+guest_user = User.new(
+  first_name: "The",
+  last_name: "Guest",
+  email: "Guest@app.com",
+  phone_number: Faker::PhoneNumber.phone_number,
+  address: Faker::Address.full_address,
+  password: 123_123
+)
+guest_user.save!
+
 puts 'Users created'
 
 offer1 = Offer.create(

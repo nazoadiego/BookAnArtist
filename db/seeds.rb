@@ -34,6 +34,7 @@ guest_user = User.new(
   address: Faker::Address.full_address,
   password: 123_123
 )
+
 guest_user.save!
 
 puts 'Users created'
@@ -42,7 +43,7 @@ offer1 = Offer.create(
   artist_name: 'Kanye West',
   description: 'You know you can\'t Rome without Caesar. Or without Yeezy...',
   price: 80_500,
-  user: User.first
+  user: guest_user
 )
 
 offer1.photos.attach(
@@ -107,7 +108,7 @@ offer6 = Offer.create(
   artist_name: 'Bruno Mars',
   description: '24k Magic Payments be gucci too',
   price: 24_000,
-  user: User.last
+  user: User.first
 )
 
 offer6.photos.attach(
@@ -120,7 +121,7 @@ offer7 = Offer.create(
   artist_name: 'BTS',
   description: 'Boys with Luv for our ARMY.',
   price: 888_000,
-  user: User.last
+  user: User.first
 )
 
 offer7.photos.attach(
@@ -133,7 +134,7 @@ offer8 = Offer.create(
   artist_name: 'DJ Khaled',
   description: 'Anotha One. I got the 🔑s. And you know, all that.',
   price: 2800,
-  user: User.last
+  user: User.first
 )
 
 offer8.photos.attach(
@@ -146,7 +147,7 @@ offer9 = Offer.create(
   artist_name: 'Drake',
   description: 'I am your Champagne Papi.',
   price: 2500,
-  user: User.last
+  user: User.first
 )
 
 offer9.photos.attach(
@@ -159,7 +160,7 @@ offer10 = Offer.create(
   artist_name: 'Elton John',
   description: 'Don\'t shoot me, I\'m just the piano player!',
   price: 1000,
-  user: User.last
+  user: User.first
 )
 
 offer10.photos.attach(
@@ -172,7 +173,7 @@ offer11 = Offer.create(
   artist_name: 'Eminem',
   description: 'I am the Real Slim Shady',
   price: 750,
-  user: User.last
+  user: User.first
 )
 
 offer11.photos.attach(
@@ -224,7 +225,7 @@ offer15 = Offer.create(
   artist_name: 'Andrea Boccelli',
   description: 'The Coolest Italian there will ever be. I am sorry Filippo. #SorryNotSorry',
   price: 6_500,
-  user: User.last
+  user: User.first
 )
 offer15.photos.attach(
   io: File.open(Rails.root.join('app/assets/images/seed/andrea.jpeg')),
@@ -236,7 +237,7 @@ offer16 = Offer.create(
   artist_name: 'Prince',
   description: 'But life is just a party, and parties weren\'t meant to last.',
   price: 80_000,
-  user: User.last
+  user: User.first
 )
 
 offer16.photos.attach(
@@ -249,7 +250,7 @@ offer17 = Offer.create(
   artist_name: 'Red Hot Chili Peppers',
   description: 'By the way I tried to say I\'d be there...',
   price: 8_000,
-  user: User.last
+  user: User.first
 )
 
 offer17.photos.attach(
@@ -262,7 +263,7 @@ offer18 = Offer.create(
   artist_name: 'Rihanna',
   description: 'Please join me under my umbrella.',
   price: 50_000,
-  user: User.last
+  user: User.first
 )
 
 offer18.photos.attach(
@@ -275,7 +276,7 @@ offer19 = Offer.create(
   artist_name: 'Shawn Mendes',
   description: 'Baby there\'s nothing holding me back!',
   price: 3_000,
-  user: User.last
+  user: User.first
 )
 
 offer19.photos.attach(
@@ -288,7 +289,7 @@ offer20 = Offer.create(
   artist_name: 'Stevie Wonder',
   description: 'Part-Time... Performer?',
   price: 8_000,
-  user: User.last
+  user: User.first
 )
 
 offer20.photos.attach(

@@ -58,7 +58,7 @@
 
 ## About The Project
 
-A Ruby On Rails application where you can book your favorite artists, as well as post offers as an artist. Which you can manage your bookings via your personal dashboard.
+A Ruby On Rails application where you can book your favorite artists, as well as post offers as an artist. Which you can manage via your personal dashboard.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -74,7 +74,7 @@ A Ruby On Rails application where you can book your favorite artists, as well as
 
 ## Usage
 
-The blog can be used to publish your articles as markdown from [GraphCMS](https://graphcms.com/). Every time the article has been published Vercel creates a new build (since we are serving a static website) thanks to the integration between Vercel and GraphCMS
+Examples and images soon!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

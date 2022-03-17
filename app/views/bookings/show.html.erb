@@ -1,46 +1,35 @@
 <div class="h-screen flex justify-center items-center">
 
-<div class="bg-sky-700 rounded-2xl shadow-xl">
-      <h1> <%= @offer.artist_name.upcase %></h1>
-      <h3>Message:</h3>
-      <p><%= @booking.message %></p>
-      <h3>Date:</h3>
-      <p>Start Time: <%= @booking.start_time.to_time.strftime('%B %e at %l:%M %p') %></p>
-      <p>End Time: <%= @booking.end_time.to_time.strftime('%B %e at %l:%M %p') %></p>
-      <h3>Total Price:</h3>
-      <h4>€<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
+  <div class="bg-sky-700 p-8 rounded-2xl shadow-xl space-y-4 -mt-24">
+        <h1> <%= @offer.artist_name.upcase %></h1>
+        <h3>Message:</h3>
+        <p>
+          <%= @booking.message.blank? ? "No message :(" : @booking.message  %>
+        </p>
+        <h3>Date:</h3>
+        <p>Start Time: <%= @booking.start_time.to_time.strftime('%B %e at %l:%M %p') %></p>
+        <p>End Time: <%= @booking.end_time.to_time.strftime('%B %e at %l:%M %p') %></p>
+        <h3>Total Price:</h3>
+        <h4>€<%= number_with_precision(@booking.total, :precision => 2, :delimiter => '.', :separator => ',') %></h4>
+        <h2>Status:</h2>
+        <% if @booking.status == "accepted" %>
+          <div class="btn btn-success">
+            <a id="pendings">
+              Accepted
+            </a>
+          </div>
+        <% elsif @booking.status = "pending" %>
+          <div class="btn btn-warning">
+            <a id="pendings">
+              Pending
+            </a>
+          </div>
+        <% elsif @booking.status = "rejected" %>
+          <div class="btn btn-error">
+            <a id="pendings">
+              Rejected
+            </a>
+          </div>
+        <% end %>
+  </div>
 </div>
-</div>
-
-      <h2 class="yellow-text">Status:</h2>
-      <% if @booking.status == "accepted" %>
-        <div class="green-neon-button" id="status-btn">
-          <a id="pendings">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Accepted
-          </a>
-        </div>
-      <% elsif @booking.status = "pending" %>
-        <div class="yellow-neon-button" id="status-btn">
-          <a id="pendings">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Pending
-          </a>
-        </div>
-      <% elsif @booking.status = "rejected" %>
-        <div class="yellow-neon-button" id="status-btn">
-          <a id="pendings">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Rejected
-          </a>
-        </div>
-      <% end %>

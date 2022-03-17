@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  get 'profile', to: 'pages#profile'
-  post 'profile', to: 'pages#accept'
-  post 'profile', to: 'pages#reject'
+  get 'dashboard', to: 'pages#dashboard'
+  post 'dashboard', to: 'pages#accept'
+  post 'dashboard', to: 'pages#reject'
   resources :offers, only: [:index, :show, :create] do
     resources :bookings, only: [:create, :update]
   end

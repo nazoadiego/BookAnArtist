@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @hide_navbar = true
   end
 
-  def profile
+  def dashboard
     @profile_user = current_user
     @offerscreated = Offer.where(["user_id = '%s'", @profile_user.id])
     @hide_footer = true

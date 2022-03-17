@@ -17,23 +17,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="http://arukeyo.vercel.app/">
+  <a href="https://bookanartist.herokuapp.com/">
     <img src="./logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Arukeyo</h3>
+  <h3 align="center">BookAnArtist</h3>
 
   <p align="center">
-    My personal blog about Programming, Japanese, Music, and Music
+    Website to book your favorite artists and offer your services as a performer!
     <br />
     <a href="#about-the-project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="http://arukeyo.vercel.app/">View Demo</a>
+    <a href="https://bookanartist.herokuapp.com/">View Demo</a>
     ·
-    <a href="https://github.com/nazoadiego/blog-arukeyo/issues">Report Bug</a>
+    <a href="https://github.com/nazoadiego/BookAnArtist/issues">Report Bug</a>
     ·
-    <a href="https://github.com/nazoadiego/blog-arukeyo/issues">Request Feature</a>
+    <a href="https://github.com/nazoadiego/BookAnArtist/issues">Request Feature</a>
   </p>
 </div>
 
@@ -72,9 +72,7 @@ Here's why I decided to create it:
 
 ### Built With
 
-- NextJS
-- React
-- GraphQL
+- Ruby On Rails
 - Tailwind CSS
 - SCSS
 
@@ -92,11 +90,11 @@ The blog can be used to publish your articles as markdown from [GraphCMS](https:
 
 ## Roadmap
 
-- [x] Implementing GraphCMS
-- [ ] Featured posts
-- [ ] Multi-language Support (Spanish)
+- [x] Core functionality
+- [ ] Adding Categories
+- [ ] Adding Payments via Stripe
 
-See the [open issues](https://github.com/nazoadiego/blog-arukeyo/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/nazoadiego/BookAnArtist/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -123,7 +121,7 @@ Don't forget to give the project a star! Thanks again!
 
 Special thanks to the following resources for making this much easier:
 
-- [GraphCMS](https://graphcms.com/)
+- [DaisyUI](https://daisyui.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

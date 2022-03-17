@@ -51,7 +51,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 
@@ -59,14 +58,7 @@
 
 ## About The Project
 
-A way of combining my two passions: writing and programming.
-
-Here's why I decided to create it:
-
-- I wanted to learn a project where the content (possibly made by non-programmers) and the code were separate, so that both can be updated and expanded upon on without interfering with each other.
-- I wanted to publish my articles directly from Markdown (which I LOVE).
-- Because it's nice to have a corner in the internet where I can share my thoughts and things I like.
-- To have a place where I can apply what I learn about accesibility, performance and SEO.
+A Ruby On Rails application where you can book your favorite artists, as well as post offers as an artist. Which you can manage your bookings via your personal dashboard.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
